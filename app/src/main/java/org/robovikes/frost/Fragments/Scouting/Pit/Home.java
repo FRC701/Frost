@@ -1,4 +1,4 @@
-package org.robovikes.frost.Fragments;
+package org.robovikes.frost.Fragments.Scouting.Pit;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,16 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import org.robovikes.frost.databinding.FragmentGalleryBinding;
+import org.robovikes.frost.databinding.FragmentPitHomeBinding;
 
-public class GalleryFragment extends Fragment {
+public class Home extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentPitHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentPitHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        
+
         return root;
     }
 

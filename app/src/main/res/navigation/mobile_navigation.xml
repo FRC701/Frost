@@ -22,4 +22,10 @@
         android:name="org.robovikes.frost.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_scouting"
+        android:name="org.robovikes.frost.Fragments.Scouting.Pit.Home"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_pit_home" />
 </navigation>
