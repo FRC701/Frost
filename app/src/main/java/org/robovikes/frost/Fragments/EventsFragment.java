@@ -8,17 +8,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import org.robovikes.frost.databinding.FragmentHomeBinding;
+import org.robovikes.frost.databinding.FragmentEventsBinding;
 
-public class HomeFragment extends Fragment {
+public class EventsFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentEventsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentEventsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        
+
         return root;
     }
 

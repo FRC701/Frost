@@ -1,4 +1,4 @@
-package org.robovikes.frost.Fragments;
+package org.robovikes.frost.Fragments.Scouting.Pit;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,17 +8,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import org.robovikes.frost.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+import org.robovikes.frost.databinding.FragmentPitActiveBinding;
 
-    private FragmentHomeBinding binding;
+
+public class PActive extends Fragment {
+
+    private FragmentPitActiveBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentPitActiveBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        
+
         return root;
     }
 

@@ -12,20 +12,44 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="org.robovikes.frost.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_rankings"
+        android:name="org.robovikes.frost.Fragments.RankingsFragment"
+        android:label="Rankings"
+        tools:layout="@layout/fragment_rankings" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="org.robovikes.frost.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_events"
+        android:name="org.robovikes.frost.Fragments.EventsFragment"
+        android:label="Events"
+        tools:layout="@layout/fragment_events" />
 
     <fragment
-        android:id="@+id/nav_scouting"
-        android:name="org.robovikes.frost.Fragments.Scouting.Pit.Home"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_pit_home" />
+        android:id="@+id/nav_matches"
+        android:name="org.robovikes.frost.Fragments.MatchesFragment"
+        android:label="Matches"
+        tools:layout="@layout/fragment_matches" />
+
+    <fragment
+        android:id="@+id/nav_create_events"
+        android:name="org.robovikes.frost.Fragments.Create.CreateEvents"
+        android:label="Create Events"
+        tools:layout="@layout/fragment_create_events" />
+
+    <fragment
+        android:id="@+id/nav_create_teams"
+        android:name="org.robovikes.frost.Fragments.Create.CreateTeams"
+        android:label="Create Teams"
+        tools:layout="@layout/fragment_create_teams" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="org.robovikes.frost.Fragments.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_pit_active"
+        android:name="org.robovikes.frost.Fragments.Scouting.Pit.PActive"
+        android:label="Pit Active Scouting"
+        tools:layout="@layout/fragment_pit_active" />
 </navigation>
