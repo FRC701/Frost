@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -29,37 +29,45 @@
         android:textAlignment="center"
         android:textSize="25sp"/>
 
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/minusMatch"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
+            android:backgroundTint="@color/lightRed"
             android:text="-"
             android:ems="8"
-            android:backgroundTint="@color/lightRed"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/matchNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ems="6"
             android:text="Match"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:ems="7"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/plusMatch"
+            app:layout_constraintStart_toEndOf="@+id/minusMatch"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/plusMatch"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
+            android:backgroundTint="@color/lightGreen"
             android:text="+"
             android:ems="8"
-            android:backgroundTint="@color/lightGreen"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
 
     <View
         android:id="@+id/view2"
@@ -85,8 +93,18 @@
         android:layout_height="wrap_content"
         android:text="Start Match" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/scouting_bar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/scouting_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/pit_match_bar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

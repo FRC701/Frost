@@ -8,12 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -59,7 +61,7 @@ public class MHome extends Fragment{
             @Override
             public void onClick(View view) {
                 NavController navController = Navigation.findNavController(getActivity(),R.id.nav_host_fragment_content_main);
-                navController.navigate(R.id.nav_pit_active);
+                navController.navigate(R.id.nav_match_auto);
             }
         });
 
@@ -68,7 +70,9 @@ public class MHome extends Fragment{
             @Override
             public void run() {
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
-                BottomNavigationView scoutingBar = root.findViewById(R.id.scouting_bar);}
+                BottomNavigationView scoutingBar = root.findViewById(R.id.scouting_bar);
+                NavigationUI.setupWithNavController(scoutingBar, navController);
+            }
             }, 10);
 
         return root;
