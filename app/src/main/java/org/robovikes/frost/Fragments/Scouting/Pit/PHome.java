@@ -1,6 +1,8 @@
 package org.robovikes.frost.Fragments.Scouting.Pit;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class PHome extends Fragment {
 
     private FragmentPitHomeBinding binding;
@@ -25,19 +29,27 @@ public class PHome extends Fragment {
 
         Button button = root.findViewById(R.id.startPit);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_pit_active);
+            }
+        });
+
+        final Handler handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                BottomNavigationView scoutingBar = root.findViewById(R.id.scouting_bar);
+                NavigationUI.setupWithNavController(scoutingBar, navController);
+            }
+        }, 10);
+
         return root;
-
-    button.setOnClickListener(new View.OnClickListener()){
-        @Override
-        public void onClick(View view) {
-            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
-            navController.navigate(R.id.nav_pit_active);
-
-        }
-    });
     }
 
-    }
     @Override
     public void onDestroyView() {
         super.onDestroyView();
