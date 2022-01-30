@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Setup Match"
+        android:textSize="45sp"
+        android:textAlignment="center"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Match"
+        android:textAlignment="center"
+        android:textSize="25sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/minusMatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:ems="8"
+            android:backgroundTint="@color/lightRed"/>
+
+        <TextView
+            android:id="@+id/matchNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Match"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:ems="7"/>
+
+        <Button
+            android:id="@+id/plusMatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:ems="8"
+            android:backgroundTint="@color/lightGreen"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="3dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Team To Scout"
+        android:textAlignment="center"
+        android:textSize="25sp"/>
+
+    <Spinner
+        android:id="@+id/teams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/startMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Match" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/scouting_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

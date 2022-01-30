@@ -3,22 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/drawable/icon_scouting.xml" value="0.201" />
         <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/activity_main.xml" value="0.1272644927536232" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/content_main.xml" value="0.1" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_create.xml" value="0.18" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_create_events.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_create_teams.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_events.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_matches.xml" value="0.22" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_pit_active.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_pit_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_pit_scouting_active.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_rankings.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/layout/fragment_settings.xml" value="0.11639492753623189" />
         <entry key="..\:/Users/Scouting/Documents/Frost/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
+        <entry key="..\:/Users/miman/OneDrive/Documents/Android Projects/App Apps/Frost/app/src/main/res/layout/fragment_match_active.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/miman/OneDrive/Documents/Android Projects/App Apps/Frost/app/src/main/res/layout/fragment_match_auto.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/rudes/AndroidStudioProjects/Frost/app/src/main/res/layout/content_main.xml" value="0.24954710144927536" />
       </map>
     </option>
