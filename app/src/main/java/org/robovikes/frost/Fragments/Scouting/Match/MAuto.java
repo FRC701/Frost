@@ -1,6 +1,8 @@
 package org.robovikes.frost.Fragments.Scouting.Match;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentMatchAutoBinding;
@@ -67,6 +74,16 @@ public class MAuto extends Fragment{
                 }
             }
         });
+
+        final Handler handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                BottomNavigationView teleAutoBar = root.findViewById(R.id.tele_auto_bar);
+                NavigationUI.setupWithNavController(teleAutoBar, navController);
+            }
+        }, 10);
 
         return root;
     }

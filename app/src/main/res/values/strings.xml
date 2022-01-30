@@ -13,7 +13,7 @@
 
     <string name="menu_scouting">Scouting</string>
 
-    <string-array name="teamSpinner">
+    <string-array name="teams">
         <item>701</item>
         <item>0000</item>
         <item>6845</item>
