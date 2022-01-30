@@ -7,10 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.Scouting.Pit.PActive">
 
+
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="648dp"
         android:text="@string/pitScoutingHeaderHome"
         android:textAlignment="center"
         android:textSize="50sp"
