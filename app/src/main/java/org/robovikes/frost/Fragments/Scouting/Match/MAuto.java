@@ -43,7 +43,7 @@ public class MAuto extends Fragment{
         autoMinusL.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             if(totalAutoScoreL > 0);{
+             if(totalAutoScoreL > 0){
                  totalAutoScoreL--;
                  autoScoreL.setText(String.valueOf(totalAutoScoreL));
                 }
@@ -58,7 +58,15 @@ public class MAuto extends Fragment{
             }
         });
 
-
+        autoMinusR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(totalAutoScoreR > 0){
+                    totalAutoScoreR--;
+                    autoScoreR.setText(String.valueOf(totalAutoScoreR));
+                }
+            }
+        });
 
         return root;
     }

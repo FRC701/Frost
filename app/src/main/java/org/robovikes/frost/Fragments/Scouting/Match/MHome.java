@@ -18,17 +18,17 @@ import androidx.navigation.Navigation;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.robovikes.frost.R;
-import org.robovikes.frost.databinding.FragmentMatchActiveBinding;
+import org.robovikes.frost.databinding.FragmentMatchHomeBinding;
 
 public class MHome extends Fragment{
 
     private Spinner teamSpinner;
-    private FragmentMatchActiveBinding binding;
+    private FragmentMatchHomeBinding binding;
     private int match = 1;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentMatchActiveBinding.inflate(inflater, container, false);
+        binding = FragmentMatchHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         Button button = root.findViewById(R.id.startMatch);
