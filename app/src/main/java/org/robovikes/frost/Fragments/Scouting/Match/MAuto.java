@@ -13,11 +13,11 @@ import androidx.fragment.app.Fragment;
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentMatchAutoBinding;
 
-public class Auto extends Fragment{
+public class MAuto extends Fragment{
 
     private FragmentMatchAutoBinding binding;
-    private int scoreL = 0;
-    private int scoreR = 0;
+    private int totalAutoScoreL = 0;
+    private int totalAutoScoreR = 0;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         binding = FragmentMatchAutoBinding.inflate(inflater, container, false);
@@ -29,8 +29,36 @@ public class Auto extends Fragment{
         Button autoMinusR = root.findViewById(R.id.autoMinusR);
         TextView autoScoreL = root.findViewById(R.id.autoScoreL);
         TextView autoScoreR = root.findViewById(R.id.autoScoreR);
-        autoScoreL.setText(String.valueOf(scoreL));
-        autoScoreR.setText(String.valueOf(scoreR));
+        autoScoreL.setText(String.valueOf(totalAutoScoreL));
+        autoScoreR.setText(String.valueOf(totalAutoScoreR));
+
+        autoPlusL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                totalAutoScoreL++;
+                autoScoreL.setText(String.valueOf(totalAutoScoreL));
+            }
+        });
+
+        autoMinusL.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             if(totalAutoScoreL > 0);{
+                 totalAutoScoreL--;
+                 autoScoreL.setText(String.valueOf(totalAutoScoreL));
+                }
+            }
+        }));
+
+        autoPlusR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                totalAutoScoreR++;
+                autoScoreR.setText(String.valueOf(totalAutoScoreR));
+            }
+        });
+
+
 
         return root;
     }

@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import org.robovikes.frost.databinding.FragmentMatchTeleBinding;
 
-public class Tele extends Fragment{
+public class MTele extends Fragment{
 
     private FragmentMatchTeleBinding binding;
 

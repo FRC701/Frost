@@ -20,7 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentMatchActiveBinding;
 
-public class MActive  extends Fragment{
+public class MHome extends Fragment{
 
     private Spinner teamSpinner;
     private FragmentMatchActiveBinding binding;
