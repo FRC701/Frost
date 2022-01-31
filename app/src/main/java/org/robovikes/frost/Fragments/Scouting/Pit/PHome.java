@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentPitHomeBinding;
@@ -19,6 +20,8 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PHome extends Fragment {
+
+    private Spinner teamSpinner;
 
     private FragmentPitHomeBinding binding;
 
