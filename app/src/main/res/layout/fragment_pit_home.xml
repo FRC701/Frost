@@ -7,17 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.Scouting.Pit.PActive">
 
-
-    <TextView
-        android:id="@+id/textView4"
+    <Spinner
+        android:id="@+id/teamSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pitScoutingHeaderHome"
-        android:textAlignment="center"
-        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/startPit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/startPit"
@@ -34,6 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="@+id/startPit">
@@ -47,8 +44,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/pit_match_bar" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="664dp"
+            android:text="@string/pitScoutingHeaderHome"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
