@@ -61,6 +61,7 @@ public class MHome extends Fragment {
             }
         });
 
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,6 +111,5 @@ public class MHome extends Fragment {
             }
         });
     }
-
 
 }

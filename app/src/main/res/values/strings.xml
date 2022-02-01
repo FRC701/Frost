@@ -107,6 +107,7 @@
     <string name="shiftingGearboxQuestions">What settings does your shifting gearbox have?</string>
     <string name="shiftingGearboxEditText">type here</string>
     <string name="save_pit_scouting">Finish Pit Scouting</string>
+    <string name="matchNumber">Match</string>
 
 
 </resources>
