@@ -1,5 +1,6 @@
 package org.robovikes.frost.Fragments.Scouting.Pit;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -10,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.widget.Button;
 import android.widget.Spinner;
-
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentPitHomeBinding;
 import androidx.navigation.NavController;
@@ -50,12 +50,14 @@ public class PHome extends Fragment {
             }
         }, 10);
 
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         return root;
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
         binding = null;
     }
 
