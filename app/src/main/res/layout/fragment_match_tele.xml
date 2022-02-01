@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -38,9 +37,10 @@
         android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@color/babyBlue"/>
+        android:background="@color/babyBlue" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -48,21 +48,20 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="8"
+            android:ems="9"
             android:text="Upper Hub"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/scrollView2"
-            app:layout_constraintHorizontal_bias="0.464"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/telePlusL"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:backgroundTint="@color/lightGreen"
-            android:ems="8"
+            android:ems="9"
             android:text="+"
             android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/scrollView2"
@@ -73,7 +72,7 @@
             android:id="@+id/teleScoreL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="8"
+            android:ems="9"
             android:text="Score"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -86,22 +85,24 @@
         <Button
             android:id="@+id/teleMinusL"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:backgroundTint="@color/lightRed"
-            android:ems="8"
+            android:ems="9"
             android:text="-"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
-            app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/teleScoreL"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -112,7 +113,7 @@
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
+                    android:ems="20"
                     android:text="Score"
                     android:textSize="25sp" />
 
@@ -126,25 +127,25 @@
                     android:id="@+id/checkBox7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+                    android:text="Lower Hub" />
 
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Endgame"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="Climbing" />
+                    android:text="Climbing"
+                    android:textSize="20sp" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content">
 
                     <RadioButton
                         android:id="@+id/radioButton"
@@ -176,7 +177,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Penalties"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -187,54 +188,54 @@
                         android:id="@+id/checkBox8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="9"
+                        android:ems="18"
                         android:text="Foul" />
 
                     <CheckBox
                         android:id="@+id/checkBox9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="9"
+                        android:ems="18"
                         android:text="Tech Foul" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <CheckBox
                         android:id="@+id/checkBox10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="9"
+                        android:ems="18"
                         android:text="Yellow Card" />
 
                     <CheckBox
                         android:id="@+id/checkBox11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="9"
+                        android:ems="18"
                         android:text="Red Card" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <CheckBox
                         android:id="@+id/checkBox12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="9"
+                        android:ems="18"
                         android:text="No Show" />
 
                     <CheckBox
                         android:id="@+id/checkBox13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="9"
+                        android:ems="18"
                         android:text="Disqualification" />
                 </LinearLayout>
 
@@ -243,11 +244,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Disabled"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="wrap_content">
 
                     <RadioButton
                         android:id="@+id/radioButton5"
@@ -268,6 +269,12 @@
                         android:text="End Match" />
                 </RadioGroup>
 
+                <Button
+                    android:id="@+id/endMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="End Match" />
+
             </LinearLayout>
         </ScrollView>
 
@@ -276,7 +283,7 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="8"
+            android:ems="9"
             android:text="Lower Hub"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -287,9 +294,9 @@
         <Button
             android:id="@+id/telePlusR"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:backgroundTint="@color/lightGreen"
-            android:ems="8"
+            android:ems="9"
             android:text="+"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -300,7 +307,7 @@
             android:id="@+id/teleScoreR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="8"
+            android:ems="9"
             android:text="Score"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -312,22 +319,25 @@
         <Button
             android:id="@+id/teleMinusR"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:backgroundTint="@color/lightRed"
-            android:ems="8"
+            android:ems="9"
             android:text="-"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/scrollView2" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="725dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:id="@+id/tele_auto_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/teleMinusL"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:menu="@menu/tele_auto_bar" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

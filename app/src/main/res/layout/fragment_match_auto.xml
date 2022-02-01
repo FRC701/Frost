@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:text="Upper Hub"
             android:textSize="20sp"
-            android:ems="8"
+            android:ems="9"
             android:textAlignment="center"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,13 +59,13 @@
         <Button
             android:id="@+id/autoPlusL"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:backgroundTint="@color/lightGreen"
-            android:ems="8"
+            android:ems="9"
             android:text="+"
             android:textSize="20sp"
+
             app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -76,7 +76,7 @@
             android:textAlignment="center"
             android:text="Score"
             android:textSize="20sp"
-            android:ems="8"
+            android:ems="9"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusL"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,13 +85,13 @@
         <Button
             android:id="@+id/autoMinusL"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:textStyle="bold"
-            android:textSize="20sp"
+            android:layout_height="70dp"
             android:backgroundTint="@color/lightRed"
-            android:ems="8"
-            app:layout_constraintBottom_toBottomOf="@+id/bottomNavView"
+            android:ems="9"
+            android:text="-"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tele_auto_bar"
             app:layout_constraintEnd_toStartOf="@+id/linearLayout"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -107,8 +107,8 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:textSize="30sp"
+                android:ems="20"
+                android:textSize="25sp"
                 android:text="Score" />
 
             <CheckBox
@@ -146,7 +146,7 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="8"
+            android:ems="9"
             android:text="Lower Hub"
             android:textAlignment="center"
             android:textSize="20sp"
@@ -157,13 +157,13 @@
         <Button
             android:id="@+id/autoPlusR"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:backgroundTint="@color/lightGreen"
-            android:ems="8"
+            android:ems="9"
             android:text="+"
             android:textSize="20sp"
+
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/linearLayout"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -174,7 +174,7 @@
             android:textAlignment="center"
             android:text="Score"
             android:textSize="20sp"
-            android:ems="8"
+            android:ems="9"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusR"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/linearLayout"
@@ -183,20 +183,21 @@
         <Button
             android:id="@+id/autoMinusR"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:textStyle="bold"
-            android:textSize="20sp"
+            android:layout_height="70dp"
             android:backgroundTint="@color/lightRed"
-            android:ems="8"
-            app:layout_constraintBottom_toBottomOf="@+id/bottomNavView"
+            android:ems="9"
+            android:text="-"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tele_auto_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/linearLayout" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavView"
+            android:id="@+id/tele_auto_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:menu="@menu/tele_auto_bar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

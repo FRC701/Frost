@@ -1,6 +1,8 @@
 package org.robovikes.frost.Fragments.Scouting.Match;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentMatchTeleBinding;
@@ -29,6 +36,7 @@ public class MTele extends Fragment{
         Button teleMinusL = root.findViewById(R.id.teleMinusL);
         Button telePlusR = root.findViewById(R.id.telePlusR);
         Button teleMinusR = root.findViewById(R.id.teleMinusR);
+        Button endMatch = root.findViewById(R.id.endMatch);
         TextView teleScoreL = root.findViewById(R.id.teleScoreL);
         TextView teleScoreR = root.findViewById(R.id.teleScoreR);
         teleScoreL.setText(String.valueOf(totalTeleScoreL));
@@ -47,7 +55,7 @@ public class MTele extends Fragment{
             public void onClick(View view) {
                 if(totalTeleScoreL > 0){
                     totalTeleScoreL--;
-                    teleMinusL.setText(String.valueOf(totalTeleScoreL));
+                    teleScoreL.setText(String.valueOf(totalTeleScoreL));
                 }
             }
         });
@@ -56,7 +64,7 @@ public class MTele extends Fragment{
             @Override
             public void onClick(View view) {
                 totalTeleScoreR++;
-                telePlusR.setText(String.valueOf(totalTeleScoreR));
+                teleScoreR.setText(String.valueOf(totalTeleScoreR));
             }
         });
 
@@ -65,10 +73,29 @@ public class MTele extends Fragment{
             public void onClick(View view) {
                 if(totalTeleScoreR > 0){
                     totalTeleScoreR--;
-                    teleMinusR.setText(String.valueOf(totalTeleScoreR));
+                    teleScoreR.setText(String.valueOf(totalTeleScoreR));
                 }
             }
         });
+
+        endMatch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                navController.navigate(R.id.nav_match_home);
+            }
+        });
+
+        final Handler handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                BottomNavigationView teleAutoBar = root.findViewById(R.id.tele_auto_bar);
+                NavigationUI.setupWithNavController(teleAutoBar, navController);
+            }
+        }, 10);
+
 
         return root;
     }
