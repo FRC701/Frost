@@ -13,7 +13,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+<<<<<<< HEAD
 import android.widget.Toast;
+=======
+>>>>>>> charlotteNewBranch
 
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentPitHomeBinding;
