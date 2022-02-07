@@ -1,6 +1,5 @@
 package org.robovikes.frost.Fragments.Scouting.Match;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -78,7 +77,6 @@ public class MHome extends Fragment {
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
                 BottomNavigationView scoutingBar = root.findViewById(R.id.scouting_bar);
                 NavigationUI.setupWithNavController(scoutingBar, navController);
-                getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
             }
         }, 10);
 
@@ -87,8 +85,6 @@ public class MHome extends Fragment {
 
     @Override
     public void onDestroyView() {
-        setRetainInstance(true);
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
         super.onDestroyView();
         binding = null;
     }

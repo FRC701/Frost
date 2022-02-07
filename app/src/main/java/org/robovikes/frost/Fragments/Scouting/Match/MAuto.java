@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -31,7 +30,6 @@ public class MAuto extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         binding = FragmentMatchAutoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        super.onSaveInstanceState(savedInstanceState);
 
         Button autoPlusL = root.findViewById(R.id.autoPlusL);
         Button autoMinusL = root.findViewById(R.id.autoMinusL);
@@ -90,13 +88,6 @@ public class MAuto extends Fragment{
         }, 10);
         return root;
     }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putInt("totalAutoScoreL",1);
-    }
-
 
     @Override
     public void onDestroyView(){

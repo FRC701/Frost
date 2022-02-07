@@ -48,7 +48,7 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/upper_hubAutoHeader"
+            android:text="Upper Hub"
             android:textSize="20sp"
             android:ems="9"
             android:textAlignment="center"
@@ -74,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="@string/upperScoreAuto"
+            android:text="Score"
             android:textSize="20sp"
             android:ems="9"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusL"
@@ -109,37 +109,37 @@
                 android:layout_height="wrap_content"
                 android:ems="20"
                 android:textSize="25sp"
-                android:text="@string/scoreQuestions" />
+                android:text="Score" />
 
             <CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/taxiingCheckBox" />
+                android:text="Taxiing" />
 
             <CheckBox
                 android:id="@+id/checkBox2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/humanPlayerUpperCheckBox" />
+                android:text="Human Player Upper Hub" />
 
             <CheckBox
                 android:id="@+id/checkBox3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/humanPlayerLowerCheckBox" />
+                android:text="Human Player Lower Hub" />
 
             <CheckBox
                 android:id="@+id/checkBox4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/upper_hubAutoCheckBox" />
+                android:text="Upper Hub" />
 
             <CheckBox
                 android:id="@+id/checkBox5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/lower_hubAutoCheckBox" />
+                android:text="Lower Hub" />
         </LinearLayout>
 
         <TextView
@@ -147,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="9"
-            android:text="@string/lower_hubAutoHeader"
+            android:text="Lower Hub"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -172,7 +172,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="@string/lowerScoreAuto"
+            android:text="Score"
             android:textSize="20sp"
             android:ems="9"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusR"

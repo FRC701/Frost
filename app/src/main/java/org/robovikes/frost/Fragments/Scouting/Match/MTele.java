@@ -1,6 +1,5 @@
 package org.robovikes.frost.Fragments.Scouting.Match;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -12,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -22,8 +20,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentMatchTeleBinding;
-
-import java.text.BreakIterator;
 
 public class MTele extends Fragment{
 
@@ -97,7 +93,6 @@ public class MTele extends Fragment{
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
                 BottomNavigationView teleAutoBar = root.findViewById(R.id.tele_auto_bar);
                 NavigationUI.setupWithNavController(teleAutoBar, navController);
-                getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
             }
         }, 10);
 
@@ -105,14 +100,9 @@ public class MTele extends Fragment{
         return root;
     }
 
-
     @Override
     public void onDestroyView(){
-        setRetainInstance(true);
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
         super.onDestroyView();
         binding = null;
     }
-
-
 }

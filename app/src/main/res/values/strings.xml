@@ -21,12 +21,6 @@
         <item>94533</item>
         <item>360</item>
         <item>975</item>
-        <item>254</item>
-        <item>973</item>
-        <item>1678</item>
-        <item>971</item>
-        <item>1323</item>
-        <item>1868</item>
     </string-array>
 
 <!--pit home page strings :) -->
@@ -113,53 +107,7 @@
     <string name="shiftingGearboxQuestions">What settings does your shifting gearbox have?</string>
     <string name="shiftingGearboxEditText">type here</string>
     <string name="save_pit_scouting">Finish Pit Scouting</string>
-
-
-
-    <!--match home page strings-->
     <string name="matchNumber">Match</string>
-    <string name="select_matchQuestion">Select Match</string>
-    <string name="teamScoutingQuestion">Select Team To Scout</string>
-    <string name="start_match">Start Match</string>
-
-    <!--match auto page strings-->
-    <string name="upperScoreAuto">Score</string>
-    <string name="taxiingCheckBox">Taxiing</string>
-    <string name="humanPlayerUpperCheckBox">Human Player Upper Hub</string>
-    <string name="humanPlayerLowerCheckBox">Human Player Lower Hub</string>
-    <string name="upper_hubAutoCheckBox">Upper Hub</string>
-    <string name="lower_hubAutoCheckBox">Lower Hub</string>
-    <string name="lowerScoreAuto">Score</string>
-    <string name="upper_hubAutoHeader">Upper Hub</string>
-    <string name="scoreQuestions">Score</string>
-    <string name="lower_hubAutoHeader">Lower Hub</string>
-
-    <!--match tele page strings-->
-    <string name="upperHubShotTele">Upper Hub</string>
-    <string name="lowerHubShotTele">Lower Hub</string>
-    <string name="lowerRungClimbTele">Low</string>
-    <string name="midRungClimbTele">Mid</string>
-    <string name="highRungClimbTele">High</string>
-    <string name="traversalRungClimbTele">Traversal</string>
-    <string name="foulInTele">Foul</string>
-    <string name="techFoulInTele">Tech Foul</string>
-    <string name="yellowCardInTele">Yellow Card</string>
-    <string name="redCardInTele">Red Card</string>
-    <string name="noShowTele">No Show</string>
-    <string name="disqualificationTele">Disqualification</string>
-    <string name="whole_matchDisabled">Whole Match</string>
-    <string name="half_matchDisabled">Half Match</string>
-    <string name="end_matchDisabled">End Match</string>
-    <string name="end_matchScout">End Match</string>
-    <string name="upperScoreTele">Score</string>
-    <string name="scoreQuestion">Score</string>
-    <string name="endgameQuestion">Endgame</string>
-    <string name="climbingQuestion">Climbing</string>
-    <string name="penaltiesQuestion">Penalties</string>
-    <string name="disabledQuestion">Disabled</string>
-    <string name="lowerScoreTele">Score</string>
-    <string name="lower_hubTeleHeader">Lower Hub</string>
-    <string name="upper_hubTeleHeader">Upper Hub</string>
 
 
 </resources>
