@@ -42,14 +42,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="9"
-            android:text="Upper Hub"
+            android:text="@string/upper_hubTeleHeader"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/scrollView2"
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="9"
-            android:text="Score"
+            android:text="@string/upperScoreTele"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/teleMinusL"
@@ -91,7 +91,7 @@
             android:text="-"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tele_auto_bar"
             app:layout_constraintEnd_toEndOf="@+id/teleScoreL"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -114,33 +114,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="20"
-                    android:text="Score"
+                    android:text="@string/scoreQuestion"
                     android:textSize="25sp" />
 
                 <CheckBox
                     android:id="@+id/checkBox6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Upper Hub" />
+                    android:text="@string/upperHubShotTele" />
 
                 <CheckBox
                     android:id="@+id/checkBox7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lower Hub" />
+                    android:text="@string/lowerHubShotTele" />
 
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Endgame"
+                    android:text="@string/endgameQuestion"
                     android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Climbing"
+                    android:text="@string/climbingQuestion"
                     android:textSize="20sp" />
 
                 <RadioGroup
@@ -151,32 +151,32 @@
                         android:id="@+id/radioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Low" />
+                        android:text="@string/lowerRungClimbTele" />
 
                     <RadioButton
                         android:id="@+id/radioButton2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Mid" />
+                        android:text="@string/midRungClimbTele" />
 
                     <RadioButton
                         android:id="@+id/radioButton3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="High" />
+                        android:text="@string/highRungClimbTele" />
 
                     <RadioButton
                         android:id="@+id/radioButton4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Traversal" />
+                        android:text="@string/traversalRungClimbTele" />
                 </RadioGroup>
 
                 <TextView
                     android:id="@+id/textView16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Penalties"
+                    android:text="@string/penaltiesQuestion"
                     android:textSize="25sp" />
 
                 <LinearLayout
@@ -189,14 +189,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="18"
-                        android:text="Foul" />
+                        android:text="@string/foulInTele" />
 
                     <CheckBox
                         android:id="@+id/checkBox9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="18"
-                        android:text="Tech Foul" />
+                        android:text="@string/techFoulInTele" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -209,14 +209,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="18"
-                        android:text="Yellow Card" />
+                        android:text="@string/yellowCardInTele" />
 
                     <CheckBox
                         android:id="@+id/checkBox11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="18"
-                        android:text="Red Card" />
+                        android:text="@string/redCardInTele" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -229,21 +229,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="18"
-                        android:text="No Show" />
+                        android:text="@string/noShowTele" />
 
                     <CheckBox
                         android:id="@+id/checkBox13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="18"
-                        android:text="Disqualification" />
+                        android:text="@string/disqualificationTele" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/textView17"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Disabled"
+                    android:text="@string/disabledQuestion"
                     android:textSize="25sp" />
 
                 <RadioGroup
@@ -254,26 +254,30 @@
                         android:id="@+id/radioButton5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Whole Match" />
+                        android:text="@string/whole_matchDisabled" />
 
                     <RadioButton
                         android:id="@+id/radioButton6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Half Match" />
+                        android:text="@string/half_matchDisabled" />
 
                     <RadioButton
                         android:id="@+id/radioButton7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="End Match" />
+                        android:text="@string/end_matchDisabled" />
                 </RadioGroup>
 
                 <Button
                     android:id="@+id/endMatch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="End Match" />
+                    android:text="@string/end_matchScout" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
 
             </LinearLayout>
         </ScrollView>
@@ -284,7 +288,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="9"
-            android:text="Lower Hub"
+            android:text="@string/lower_hubTeleHeader"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -308,7 +312,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="9"
-            android:text="Score"
+            android:text="@string/lowerScoreTele"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/teleMinusR"
@@ -325,17 +329,18 @@
             android:text="-"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tele_auto_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/scrollView2" />
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/tele_auto_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@id/teleMinusL"
+            app:layout_constraintBottom_toBottomOf="@id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
             app:menu="@menu/tele_auto_bar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
