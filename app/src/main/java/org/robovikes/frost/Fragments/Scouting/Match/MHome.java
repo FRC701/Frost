@@ -37,10 +37,10 @@ public class MHome extends Fragment {
         View root = binding.getRoot();
         setUpSpinners();
 
-        Button button = root.findViewById(R.id.startMatch);
+        Button button = root.findViewById(R.id.button_start_match_scouting);
         Button plusMatch = root.findViewById(R.id.plusMatch);
         Button minusMatch = root.findViewById(R.id.minusMatch);
-        TextView matchNum = root.findViewById(R.id.matchNumber);
+        TextView matchNum = root.findViewById(R.id.textView_matchNumber);
         matchNum.setText(String.valueOf(match));
 
         plusMatch.setOnClickListener(new View.OnClickListener() {
