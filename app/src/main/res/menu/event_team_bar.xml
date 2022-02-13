@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_create_events"
+        android:title="Events"
+        android:icon="@drawable/icon_events"/>
+
+    <item
+        android:id="@+id/nav_create_teams"
+        android:title="Teams"
+        android:icon="@drawable/icon_teams"/>
+
+</menu>
