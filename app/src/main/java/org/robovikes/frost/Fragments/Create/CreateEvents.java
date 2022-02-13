@@ -37,7 +37,7 @@ public class CreateEvents extends Fragment {
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
                 BottomNavigationView eventsTeamsBar = root.findViewById(R.id.create_bar);
                 NavigationUI.setupWithNavController(eventsTeamsBar, navController);
-                getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+
             }
         }, 10);
 
