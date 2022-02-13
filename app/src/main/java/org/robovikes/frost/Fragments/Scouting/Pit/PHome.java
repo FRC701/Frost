@@ -12,11 +12,11 @@ import androidx.fragment.app.Fragment;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.Spinner;
-<<<<<<< HEAD
+import android.widget.TextView;
 import android.widget.Toast;
-=======
->>>>>>> charlotteNewBranch
+
 
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentPitHomeBinding;
@@ -28,6 +28,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class PHome extends Fragment {
 
+
+
     private Spinner teamSpinner;
 
     private FragmentPitHomeBinding binding;
@@ -36,6 +38,9 @@ public class PHome extends Fragment {
 
         binding = FragmentPitHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+
+
 
         Button button = root.findViewById(R.id.startPit);
         setUpSpinners();
