@@ -35,8 +35,8 @@ public class MAuto extends Fragment{
         Button autoMinusL = root.findViewById(R.id.autoMinusL);
         Button autoPlusR = root.findViewById(R.id.autoPlusR);
         Button autoMinusR = root.findViewById(R.id.autoMinusR);
-        TextView autoScoreL = root.findViewById(R.id.autoScoreL);
-        TextView autoScoreR = root.findViewById(R.id.autoScoreR);
+        TextView autoScoreL = root.findViewById(R.id.textView_upperScoreAuto);
+        TextView autoScoreR = root.findViewById(R.id.textView_lowerScoreAuto);
         autoScoreL.setText(String.valueOf(totalAutoScoreL));
         autoScoreR.setText(String.valueOf(totalAutoScoreR));
 

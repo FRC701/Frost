@@ -7,15 +7,50 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.Create.CreateTeams">
 
-    <TextView
-        android:id="@+id/text_gallery"
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/create_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CREATE EVENTS PAGE"
-        android:textAlignment="center"
-        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:menu="@menu/event_team_bar">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <EditText
+        android:id="@+id/eventName"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/text_box"
+        android:drawableStart="@drawable/icon_teams"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Team Number"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/create_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.339"/>
+
+    <Button
+        android:id="@+id/creatTeam"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="Create Team"
+        app:layout_constraintBottom_toTopOf="@+id/create_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.561"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -107,7 +107,63 @@
     <string name="shiftingGearboxQuestions">What settings does your shifting gearbox have?</string>
     <string name="shiftingGearboxEditText">type here</string>
     <string name="save_pit_scouting">Finish Pit Scouting</string>
-    <string name="matchNumber">Match</string>
+
+
+
+
+    <!--match home page strings-->
+    <string name="textView_matchNumber">Match</string>
+    <string name="textView_setup_matchHeader">Setup Match</string>
+    <string name="textView_teamScoutingQuestion">Select Team To Scout</string>
+    <string name="button_start_match_scouting">Start Match</string>
+    <string name="textView_selectMatch">Select Match</string>
+
+
+    <!--match auto page strings-->
+    <string name="textView_teamAuto">Team:</string>
+    <string name="textView_matchAuto">Match:</string>
+    <string name="textView_deviceAuto">Device:</string>
+    <string name="textView_upper_hubAutoHeader">Upper Hub</string>
+    <string name="textView_upperScoreAuto">Score</string>
+    <string name="textView_scoreQuestionAuto">Score</string>
+    <string name="checkBox_taxiing">Taxiing</string>
+    <string name="checkBox_humanPlayerUpper">Human Player Upper Hub</string>
+    <string name="checkBox_humanPlayerLower">Human Player Lower Hub</string>
+    <string name="checkBox_upper_hubAuto">Upper Hub</string>
+    <string name="checkBox_lower_hubAuto">Lower Hub</string>
+    <string name="textView_lower_hubAutoHeader">Lower Hub</string>
+    <string name="textView_lowerScoreAuto">Score</string>
+
+
+    <!--match tele page strings-->
+    <string name="TextView_teamTele">Team:</string>
+    <string name="textView_matchTele">Match:</string>
+    <string name="textView_deviceTele">Device:</string>
+    <string name="textView_upper_hubTeleHeader">Upper Hub</string>
+    <string name="textView_upperScoreTele">Score</string>
+    <string name="textView_scoreQuestionTele">Score</string>
+    <string name="checkBox_upperHubShotTele">Upper Hub</string>
+    <string name="checkBox_lowerHubShotTele">Lower Hub</string>
+    <string name="textView_endgameQuestion">Endgame</string>
+    <string name="textView_climbingQuestion">Climbing</string>
+    <string name="checkBox_lowRungClimbTele">Low</string>
+    <string name="checkBox_midRungClimbTele">Mid</string>
+    <string name="checkBox_highRungClimbTele">High</string>
+    <string name="checkBox_traversalRungClimbTele">Traversal</string>
+    <string name="textView_penaltiesQuestions">Penalties</string>
+    <string name="checkBox_foulInTele">Foul</string>
+    <string name="checkBox_techFoulInTele">Tech Foul</string>
+    <string name="checkBox_yellowCardInTele">Yellow Card</string>
+    <string name="checkBox_redCardInTele">Red Card</string>
+    <string name="checkBox_noShowTele">No Show</string>
+    <string name="checkBox_disqualificationTele">Disqualification</string>
+    <string name="textView_disabledQuestion">Disabled</string>
+    <string name="radioButton_whole_matchDisabled">Whole Match</string>
+    <string name="radioButton_half_matchDisabled">Half Match</string>
+    <string name="radioButton_end_matchDisabled">End Match</string>
+    <string name="button_end_matchScout">End Match</string>
+    <string name="textView_lower_hubTeleHeader">Lower Hub</string>
+    <string name="textView_lowerScoreTele">Score</string>
 
 
 </resources>

@@ -13,25 +13,25 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/autoTeam"
+            android:id="@+id/textView_teamAuto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Team: " />
+            android:text="@string/textView_teamAuto" />
 
         <TextView
-            android:id="@+id/autoMatch"
+            android:id="@+id/textView_matchAuto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Match: " />
+            android:text="@string/textView_matchAuto" />
 
         <TextView
-            android:id="@+id/autoDevice"
+            android:id="@+id/textView_deviceAuto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Device: " />
+            android:text="@string/textView_deviceAuto" />
     </LinearLayout>
 
     <View
@@ -45,10 +45,10 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/textView_upper_hubAutoHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Upper Hub"
+            android:text="@string/textView_upper_hubAutoHeader"
             android:textSize="20sp"
             android:ems="9"
             android:textAlignment="center"
@@ -67,14 +67,14 @@
 
             app:layout_constraintEnd_toStartOf="@+id/linearLayout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_upper_hubAutoHeader" />
 
         <TextView
-            android:id="@+id/autoScoreL"
+            android:id="@+id/textView_upperScoreAuto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Score"
+            android:text="@string/textView_upperScoreAuto"
             android:textSize="20sp"
             android:ems="9"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusL"
@@ -104,50 +104,50 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textView_scoreQuestionAuto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="20"
                 android:textSize="25sp"
-                android:text="Score" />
+                android:text="@string/textView_scoreQuestionAuto" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBox_taxiing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Taxiing" />
+                android:text="@string/checkBox_taxiing" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/checkBox_humanPlayerUpper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Human Player Upper Hub" />
+                android:text="@string/checkBox_humanPlayerUpper" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/checkBox_humanPlayerLower"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Human Player Lower Hub" />
+                android:text="@string/checkBox_humanPlayerLower" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/checkBox_upper_hubAuto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Upper Hub" />
+                android:text="@string/checkBox_upper_hubAuto" />
 
             <CheckBox
-                android:id="@+id/checkBox5"
+                android:id="@+id/checkBox_lower_hubAuto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lower Hub" />
+                android:text="@string/checkBox_lower_hubAuto" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/textView_lower_hubAutoHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="9"
-            android:text="Lower Hub"
+            android:text="@string/textView_lower_hubAutoHeader"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -165,14 +165,14 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/linearLayout"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_lower_hubAutoHeader" />
 
         <TextView
-            android:id="@+id/autoScoreR"
+            android:id="@+id/textView_lowerScoreAuto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Score"
+            android:text="@string/textView_lowerScoreAuto"
             android:textSize="20sp"
             android:ems="9"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusR"

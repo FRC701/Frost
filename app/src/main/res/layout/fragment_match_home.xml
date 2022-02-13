@@ -8,10 +8,10 @@
     tools:context=".Fragments.Scouting.Match.MHome">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView_setup_matchHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Setup Match"
+        android:text="@string/textView_setup_matchHeader"
         android:textSize="45sp"
         android:textAlignment="center"/>
 
@@ -22,10 +22,10 @@
         android:background="@color/black"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView_selectMatch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Match"
+        android:text="@string/textView_selectMatch"
         android:textAlignment="center"
         android:textSize="25sp"/>
 
@@ -45,11 +45,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/matchNumber"
+            android:id="@+id/textView_matchNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="6"
-            android:text="@string/matchNumber"
+            android:text="@string/textView_matchNumber"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -75,10 +75,10 @@
         android:layout_height="3dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView_teamScoutingQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Team To Scout"
+        android:text="@string/textView_teamScoutingQuestion"
         android:textAlignment="center"
         android:textSize="25sp"/>
 
@@ -94,10 +94,10 @@
         android:layout_height="20dp" />
 
     <Button
-        android:id="@+id/startMatch"
+        android:id="@+id/button_start_match_scouting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start Match" />
+        android:text="@string/button_start_match_scouting" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
