@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/matchAutoLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,6 +9,7 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/matchAutoLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -41,6 +43,7 @@
         android:background="@color/babyBlue"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matchAutoLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -52,7 +55,7 @@
             android:textSize="20sp"
             android:ems="9"
             android:textAlignment="center"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/matchAutoLayout3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,7 +68,7 @@
             android:text="+"
             android:textSize="20sp"
 
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/matchAutoLayout3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_upper_hubAutoHeader" />
 
@@ -78,7 +81,7 @@
             android:textSize="20sp"
             android:ems="9"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusL"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/matchAutoLayout3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autoPlusL" />
 
@@ -92,11 +95,11 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tele_auto_bar"
-            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/matchAutoLayout3"
             app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/matchAutoLayout3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -151,7 +154,7 @@
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/matchAutoLayout3"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -164,7 +167,7 @@
             android:textSize="20sp"
 
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/matchAutoLayout3"
             app:layout_constraintTop_toBottomOf="@+id/textView_lower_hubAutoHeader" />
 
         <TextView
@@ -177,7 +180,7 @@
             android:ems="9"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusR"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toEndOf="@+id/matchAutoLayout3"
             app:layout_constraintTop_toBottomOf="@+id/autoPlusR" />
 
         <Button
@@ -191,7 +194,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tele_auto_bar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout" />
+            app:layout_constraintStart_toEndOf="@+id/matchAutoLayout3" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/tele_auto_bar"
