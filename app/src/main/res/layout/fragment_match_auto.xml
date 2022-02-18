@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/matchAutoLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,6 +9,7 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/matchAutoLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -41,6 +43,7 @@
         android:background="@color/babyBlue"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matchAutoLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -96,7 +99,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/matchAutoLayout3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -191,7 +194,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tele_auto_bar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout" />
+            app:layout_constraintStart_toEndOf="@+id/matchAutoLayout3" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/tele_auto_bar"
