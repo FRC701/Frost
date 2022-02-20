@@ -63,28 +63,7 @@ public class PHome extends Fragment {
         return root;
 
     }
-    public void setUpSpinners() {
-        View root = binding.getRoot();
 
-        teamSpinner = root.findViewById(R.id.teamSpinner);
-
-        ArrayAdapter<CharSequence> teamAdapter = ArrayAdapter.createFromResource(root.getContext(), R.array.teams, android.R.layout.simple_spinner_item);
-        teamAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        teamSpinner.setAdapter(teamAdapter);
-
-        teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String choice = parent.getItemAtPosition(position).toString();
-                Toast.makeText(binding.getRoot().getContext(), choice, Toast.LENGTH_LONG).show();
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-            }
-        });
-    }
     @Override
     public void onDestroyView() {
         super.onDestroyView();

@@ -17,9 +17,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/pitActiveScrollView">
-
+        app:layout_constraintTop_toTopOf="parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:id="@+id/haveAutoRadioGroup">
+                android:id="@+id/radioGroup_haveAuto">
 
                 <RadioButton
                     android:id="@+id/radioButton_autoYes"
@@ -125,7 +123,8 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_intakeCargoGround">
 
                 <RadioButton
                     android:id="@+id/radioButton_cargoYes"
@@ -218,6 +217,7 @@
                 android:textColor="@color/black"/>
 
             <RadioGroup
+                android:id="@+id/radioGroup_ScoreEitherHubs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -293,6 +293,7 @@
                 android:textColor="@color/black"/>
 
             <RadioGroup
+                android:id="@+id/radioGroup_defenseQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -354,6 +355,7 @@
                 android:textColor="@color/black"/>
 
             <RadioGroup
+                android:id="@+id/radioButton_robotClimb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -382,6 +384,7 @@
                 android:textColor="@color/black"/>
 
             <RadioGroup
+                android:id="@+id/radioButton_WhereStartingPoint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -413,7 +416,8 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/radioButton_HighestBar">
 
                 <RadioButton
                     android:id="@+id/radioButton_lowBarHighest"
@@ -455,7 +459,8 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_lowBarConsistent">
 
                 <RadioButton
                     android:id="@+id/radioButton_lowBarConsistent"
@@ -497,7 +502,8 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/radioButton_useLaunchpad">
 
                 <RadioButton
                     android:id="@+id/radioButton_yesLaunchpad"
@@ -534,6 +540,7 @@
                 android:textColor="@color/black"/>
 
             <RadioGroup
+                android:id="@+id/radioButton_openClosedChassis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -567,7 +574,8 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/radioButton_openClosedBumper">
 
                 <RadioButton
                     android:id="@+id/radioButton_openBumper"
@@ -596,6 +604,7 @@
                 android:textColor="@color/black"/>
 
             <RadioGroup
+                android:id="@+id/radioButton_shiftingGearbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
