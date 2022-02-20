@@ -173,4 +173,24 @@
     <color name="babyBlue">#89CFF0</color>
     <color name="babyPink">#F4C2C2</color>
     <color name="babyPowder">#FEFEFA</color>
+
+
+<!--light mode color palette-->
+
+    <color name="extremeLightBlue">#F8F9FB</color>
+    <color name="veryLightBlue">#E1ECF7</color>
+    <color name="sortOfLightBlue">#AECBEB</color>
+    <color name="darkLightBlue">#83B0E1</color>
+    <color name="mediocreLightBlue">#71A5DE</color>
+
+<!--cyan color palette-->
+    <color name="extremeLightCyan">#DCEEF3</color>
+    <color name="veryLightCyan">#C2E2EA</color>
+    <color name="sortOfLightCyan">#A7D5E1</color>
+    <color name="darkLightCyan">#8DC8D8</color>
+    <color name="mediocreLightCyan">#72BBCE</color>
+
+<!--dark mode blue -->
+    <color name="darkBlueDefault">#001233</color>
+
 </resources>

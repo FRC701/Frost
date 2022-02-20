@@ -19,7 +19,10 @@ import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentPitActiveBinding;
 
 
+
 public class PActive extends Fragment {
+    SeekBar seekBar;
+    TextView textView;
 
     SeekBar seekBar;
     TextView textView;

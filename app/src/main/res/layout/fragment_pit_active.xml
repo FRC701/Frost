@@ -5,10 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Scouting.Pit.PActive"
-    android:id="@+id/pitActiveLayout1">
+    android:background="@color/veryLightBlue"
+    tools:context=".Fragments.Scouting.Pit.PActive">
 
     <ScrollView
+        android:id="@+id/scrollView_PitActive"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,19 +27,21 @@
             android:id="@+id/pitActiveLayout2">
 
             <TextView
+                android:id="@+id/textview_autoQuestionsSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/autoQuestionsSection"
-                android:id="@+id/autoQuestionsSection"
+                android:text="@string/textview_autoQuestionsSection"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="30sp"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textview_haveAutoQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/haveAutoQuestion"
-                android:id="@+id/haveAutoQuestion"
-                android:textSize="15sp" />
+                android:text="@string/textview_haveAutoQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -47,24 +50,32 @@
                 android:id="@+id/haveAutoRadioGroup">
 
                 <RadioButton
+                    android:id="@+id/radioButton_autoYes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/autoYes" />
+                    android:text="@string/radioButton_autoYes"
+                    android:textColor="@color/black"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
 
                 <RadioButton
+                    android:id="@+id/radioButton_autoNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/autoNo" />
+                    android:text="@string/radioButton_autoNo"
+                    android:textColor="@color/black"
+                    tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
 
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textview_robotAutoFunctionQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/robotAutoFunctionQuestion"
-                android:textSize="15sp" />
+                android:text="@string/textview_robotAutoFunctionQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,32 +84,43 @@
                 android:id="@+id/pitActiveLayout3">
 
                 <CheckBox
+                    android:id="@+id/checkbox_robotAutoTaxiing"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/robotAutoTaxiing" />
+                    android:text="@string/checkbox_robotAutoTaxiing"
+                    android:textColor="@color/black"/>
 
                 <CheckBox
+                    android:id="@+id/checkbox_robotAutoHumanPlayer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/robotAutoHumanPlayer" />
+                    android:text="@string/checkbox_robotAutoHumanPlayer"
+                    android:textColor="@color/black"/>
 
                 <CheckBox
+                    android:id="@+id/checkbox_robotAutoUpperHub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/robotAutoUpperHub" />
+                    android:text="@string/checkbox_robotAutoUpperHub"
+                    android:textColor="@color/black"/>
 
                 <CheckBox
+                    android:id="@+id/checkbox_robotAutoLowerHub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/robotAutoLowerHub" />
+                    android:text="@string/checkbox_robotAutoLowerHub"
+                    android:textColor="@color/black"/>
 
 
             </LinearLayout>
 
             <TextView
+                android:id="@+id/textview_intakeCargoGroundQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/intakeCargoGroundQuestion" />
+                android:text="@string/textview_intakeCargoGroundQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -106,27 +128,36 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_cargoYes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cargoYes" />
+                    android:text="@string/radioButton_cargoYes"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_cargoNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cargoNo" />
+                    android:text="@string/radioButton_cargoNo"
+                    android:textColor="@color/black"/>
 
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textview_humanPlayerAccuracyQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/humanPlayerAccuracyQuestion" />
+                android:text="@string/textview_humanPlayerAccuracyQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/textViewAccuracy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/accuracyRating" />
+                android:text="@string/textView_accuracyRating"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <SeekBar
                 android:id="@+id/seekBarAccuracy"
@@ -137,36 +168,54 @@
                 android:progress="0" />
 
             <TextView
+                android:id="@+id/textView_upperHubAmountQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/upperHubAmountQuestion" />
+                android:text="@string/textView_upperHubAmountQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_upperHubAmount"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/upperHubAmountEditText" />
+                android:hint="@string/editText_upperHubAmount"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
+                android:id="@+id/textview_lowerHubAmountQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/lowerHubAmountQuestion" />
+                android:text="@string/textview_lowerHubAmountQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_lowerHubAmount"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/lowerHubAmountEditText" />
+                android:hint="@string/editText_lowerHubAmount"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_TeleopQuestionsSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/TeleopQuestionsSection"
+                android:text="@string/textView_TeleopQuestionsSection"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="30sp"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_ScoreEitherHubsQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ScoreEitherHubsQuestion" />
+                android:text="@string/textView_ScoreEitherHubsQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -174,51 +223,74 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_UpperHubScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/UpperHubScore" />
+                    android:text="@string/radioButton_UpperHubScore"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_LowerHubScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/LowerHubScore" />
+                    android:text="@string/radioButton_LowerHubScore"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_NeitherHubScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/NeitherHubScore" />
+                    android:text="@string/radioButton_NeitherHubScore"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_BothHubScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/BothHubScore" />
+                    android:text="@string/radioButton_BothHubScore"
+                    android:textColor="@color/black"/>
 
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textView_BallHoldAmountQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/BallHoldAmountQuestion" />
+                android:text="@string/textView_BallHoldAmountQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_BallHoldAmount"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/BallHoldAmountEditText" />
+                android:hint="@string/editText_BallHoldAmount"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_FieldWhereShootQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/FieldWhereShootQuestion" />
+                android:text="@string/textView_FieldWhereShootQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_FieldWhereShoot"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/FieldWhereShootEditText" />
+                android:hint="@string/editText_FieldWhereShoot"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_defenseQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/defenseQuestion" />
+                android:text="@string/textView_defenseQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -226,29 +298,38 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_yesDefense"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/yesDefense" />
+                    android:text="@string/radioButton_yesDefense"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_noDefense"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/noDefense" />
+                    android:text="@string/radioButton_noDefense"
+                    android:textColor="@color/black"/>
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textView_rateDefenseQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/rateDefenseQuestion" />
+                android:text="@string/textView_rateDefenseQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/textViewRating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ratingDefense" />
+                android:text="@string/textView_ratingDefense"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <SeekBar
-                android:id="@+id/seekBar"
+                android:id="@+id/seekBarRating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -256,16 +337,21 @@
                 android:progress="0" />
 
             <TextView
+                android:id="@+id/textView_endGameQuestionsSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/endGameQuestionsSection"
+                android:text="@string/textView_endGameQuestionsSection"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="30sp"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_robotClimbQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/robotClimbQuestion" />
+                android:text="@string/textView_robotClimbQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -273,20 +359,27 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_yesClimb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/yesClimb" />
+                    android:text="@string/radioButton_yesClimb"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_noClimb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/noClimb" />
+                    android:text="@string/radioButton_noClimb"
+                    android:textColor="@color/black"/>
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textView_WhereStartingPointQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/WhereStartingPointQuestion" />
+                android:text="@string/textView_WhereStartingPointQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -294,21 +387,28 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_lowBarStarting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lowBarStarting" />
+                    android:text="@string/radioButton_lowBarStarting"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_middleBarStarting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/middleBarStarting" />
+                    android:text="@string/radioButton_middleBarStarting"
+                    android:textColor="@color/black"/>
 
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textView_HighestBarQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/HighestBarQuestion" />
+                android:text="@string/textView_HighestBarQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -316,30 +416,41 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_lowBarHighest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lowBarHighest" />
+                    android:text="@string/radioButton_lowBarHighest"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_middleBarHighest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/middleBarHighest" />
+                    android:text="@string/radioButton_middleBarHighest"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_highBarHighest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/highBarHighest" />
+                    android:text="@string/radioButton_highBarHighest"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_transversalBarHighest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/transversalBarHighest" />
+                    android:text="@string/radioButton_transversalBarHighest"
+                    android:textColor="@color/black"/>
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textView_consistentBarQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/consistentBarQuestion" />
+                android:text="@string/textView_consistentBarQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -347,31 +458,41 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_lowBarConsistent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/lowBarConsistent" />
+                    android:text="@string/radioButton_lowBarConsistent"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_middleBarConsistent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/middleBarConsistent" />
+                    android:text="@string/radioButton_middleBarConsistent"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_highBarConsistent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/highBarConsistent" />
+                    android:text="@string/radioButton_highBarConsistent"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_transversalBarConsistent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/transversalBarConsistent" />
+                    android:text="@string/radioButton_transversalBarConsistent"
+                    android:textColor="@color/black"/>
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textView_useLaunchpadQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/useLaunchpadQuestion"
-                android:textSize="15sp" />
+                android:text="@string/textView_useLaunchpadQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -379,30 +500,38 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_yesLaunchpad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/yesLaunchpad" />
+                    android:text="@string/radioButton_yesLaunchpad"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_noLaunchpad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/noLaunchpad" />
+                    android:text="@string/radioButton_noLaunchpad"
+                    android:textColor="@color/black"/>
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textView_robotQuestionsSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/robotQuestionsSection"
+                android:text="@string/textView_robotQuestionsSection"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="30sp"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_openClosedChassisQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/openClosedChassisQuestion"
-                android:textSize="15sp" />
+                android:text="@string/textView_openClosedChassisQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -410,24 +539,30 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_openChassis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/openChassis" />
+                    android:text="@string/radioButton_openChassis"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_closedChassis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/closedChassis" />
+                    android:text="@string/radioButton_closedChassis"
+                    android:textColor="@color/black"/>
 
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textView_openClosedBumperQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/openClosedBumperQuestion"
-                android:textSize="15sp" />
+                android:text="@string/textView_openClosedBumperQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -435,24 +570,30 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_openBumper"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/openBumper" />
+                    android:text="@string/radioButton_openBumper"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/RadioButton_closedBumper"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/closedBumper" />
+                    android:text="@string/RadioButton_closedBumper"
+                    android:textColor="@color/black"/>
 
             </RadioGroup>
 
             <TextView
+                android:id="@+id/textView_shiftingGearboxQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/shiftingGearboxQuestion"
-                android:textSize="15sp" />
+                android:text="@string/textView_shiftingGearboxQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -460,95 +601,141 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton_yesShiftingGearbox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/yesShiftingGearbox" />
+                    android:text="@string/radioButton_yesShiftingGearbox"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
+                    android:id="@+id/radioButton_noShiftingGearbox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="48dp"
-                    android:text="@string/noShiftingGearbox" />
+                    android:text="@string/radioButton_noShiftingGearbox"
+                    android:textColor="@color/black"/>
 
             </RadioGroup>
 
 
             <TextView
+                android:id="@+id/textView_driveTrainQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/driveTrainQuestion" />
+                android:text="@string/textView_driveTrainQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_driveTrain"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/driveTrainEditText" />
+                android:hint="@string/editText_driveTrain"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_shiftingGearboxQuestions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/shiftingGearboxQuestions" />
+                android:text="@string/textView_shiftingGearboxQuestions"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_shiftingGearbox"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/shiftingGearboxEditText" />
+                android:hint="@string/editText_shiftingGearbox"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_intakeQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/intakeQuestion" />
+                android:text="@string/textView_intakeQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_intake"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/intakeEditText" />
+                android:hint="@string/editText_intake"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_mechanismQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/mechanismQuestion" />
+                android:text="@string/textView_mechanismQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_mechanism"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/mechanismEditText" />
+                android:hint="@string/editText_mechanism"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_programmingLanguageRobotQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/programmingLanguageRobotQuestion" />
+                android:text="@string/textView_programmingLanguageRobotQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_programmingLanguageRobot"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/programmingLanguageRobotEditText" />
+                android:hint="@string/editText_programmingLanguageRobot"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_ProgrammingLanguageAppQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ProgrammingLanguageAppQuestion" />
+                android:text="@string/textView_ProgrammingLanguageAppQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_programmingLanguageApp"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/programmingLanguageAppEditText" />
+                android:hint="@string/editText_programmingLanguageApp"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <TextView
+                android:id="@+id/textView_climbingMechanismQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/climbingMechanismQuestion" />
+                android:text="@string/textView_climbingMechanismQuestion"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <EditText
+                android:id="@+id/editText_climbingMechanism"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="@string/climbingMechanismEditText" />
+                android:hint="@string/editText_climbingMechanism"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"/>
 
             <Button
                 android:id="@+id/savePitActive"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/save_pit_scouting" />
+                android:text="@string/button_save_pit_scouting" />
 
         </LinearLayout>
     </ScrollView>
