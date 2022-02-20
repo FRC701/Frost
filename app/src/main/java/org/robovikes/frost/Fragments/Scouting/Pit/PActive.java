@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SeekBar;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,15 +18,16 @@ import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentPitActiveBinding;
 
 
-public class PActive extends Fragment {
 
+public class PActive extends Fragment {
     SeekBar seekBar;
     TextView textView;
 
     SeekBar seekBarAccuracy;
     TextView textViewAccuracy;
 
-    private Spinner teamSpinner;
+
+
     private FragmentPitActiveBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,10 +35,8 @@ public class PActive extends Fragment {
         binding = FragmentPitActiveBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-
-        seekBar = (SeekBar) root.findViewById(R.id.seekBar);
+        seekBar = (SeekBar) root.findViewById(R.id. seekBarRating);
         textView = (TextView) root.findViewById(R.id.textViewRating);
-
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -76,6 +74,9 @@ public class PActive extends Fragment {
 
             }
         });
+
+
+
         Button button = root.findViewById(R.id.savePitActive);
 
         button.setOnClickListener(new View.OnClickListener() {
