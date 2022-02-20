@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    android:id="@+id/matchHomeLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -31,6 +33,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matchHomeLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -100,6 +103,7 @@
         android:text="@string/button_start_match_scouting" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matchHomeLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
