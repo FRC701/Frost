@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/veryLightBlue"
-    tools:context=".Fragments.Scouting.Pit.PActive">
+    tools:context=".Fragments.Scouting.Pit.PActive"
+    android:id="@+id/constraintLayout_pitActive">
 
     <ScrollView
         android:id="@+id/scrollView_PitActive"
@@ -20,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/linearLayout_pitScoutingActive"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -32,6 +34,14 @@
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textColor="@color/black"/>
+
+            <View
+                android:id="@+id/view_pitActiveLineAuto"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/cornflowerBlue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textview_haveAutoQuestion"
@@ -53,7 +63,7 @@
                     android:minHeight="48dp"
                     android:text="@string/radioButton_autoYes"
                     android:textColor="@color/black"
-                    tools:ignore="DuplicateSpeakableTextCheck" />
+                    tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
                 <RadioButton
                     android:id="@+id/radioButton_autoNo"
@@ -62,7 +72,7 @@
                     android:minHeight="48dp"
                     android:text="@string/radioButton_autoNo"
                     android:textColor="@color/black"
-                    tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+                    tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
             </RadioGroup>
 
@@ -84,7 +94,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/checkbox_robotAutoTaxiing"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    tools:ignore="TextContrastCheck" />
 
                 <CheckBox
                     android:id="@+id/checkbox_robotAutoHumanPlayer"
@@ -128,14 +139,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/radioButton_cargoYes"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    tools:ignore="TextContrastCheck" />
 
                 <RadioButton
                     android:id="@+id/radioButton_cargoNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/radioButton_cargoNo"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    tools:ignore="TextContrastCheck" />
 
             </RadioGroup>
 
@@ -177,8 +190,8 @@
                 android:layout_height="48dp"
                 android:hint="@string/editText_upperHubAmount"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                android:textColorHint="@color/darkGray"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,TextContrastCheck" />
 
             <TextView
                 android:id="@+id/textview_lowerHubAmountQuestion"
@@ -193,7 +206,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_lowerHubAmount"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -204,6 +217,14 @@
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textColor="@color/black"/>
+
+            <View
+                android:id="@+id/view_pitActiveLineTeleop"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/cornflowerBlue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textView_ScoreEitherHubsQuestion"
@@ -223,28 +244,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/radioButton_UpperHubScore"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    tools:ignore="TextContrastCheck" />
 
                 <RadioButton
                     android:id="@+id/radioButton_LowerHubScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/radioButton_LowerHubScore"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    tools:ignore="TextContrastCheck,TextContrastCheck" />
 
                 <RadioButton
                     android:id="@+id/radioButton_NeitherHubScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/radioButton_NeitherHubScore"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    tools:ignore="TextContrastCheck" />
 
                 <RadioButton
                     android:id="@+id/radioButton_BothHubScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/radioButton_BothHubScore"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    tools:ignore="TextContrastCheck,TextContrastCheck" />
 
             </RadioGroup>
 
@@ -261,7 +286,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_BallHoldAmount"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -277,7 +302,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_FieldWhereShoot"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textView_UpperHubAmountQuestionTeleop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_UpperHubAmountTeleop"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/editText_UpperHubAmountTeleop"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/edittext_UpperHubAmountTeleop"
+                android:textColorHint="@color/darkGray"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textView_LowerHubAmountQuestionTeleop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_LowerHubAmountTeleop"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/editText_LowerHubAmountTeleop"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/editText_LowerHubAmountTeleop"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -340,6 +397,14 @@
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textColor="@color/black"/>
+
+            <View
+                android:id="@+id/view_pitActiveLineEndgame"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/cornflowerBlue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textView_robotClimbQuestion"
@@ -521,6 +586,14 @@
                 android:textSize="30sp"
                 android:textColor="@color/black"/>
 
+            <View
+                android:id="@+id/view_pitActiveLineRobot"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/cornflowerBlue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textView_openClosedChassisQuestion"
                 android:layout_width="match_parent"
@@ -628,7 +701,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_driveTrain"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -644,7 +717,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_shiftingGearbox"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -660,7 +733,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_intake"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -676,7 +749,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_mechanism"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -692,7 +765,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_programmingLanguageRobot"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -708,7 +781,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_programmingLanguageApp"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -724,7 +797,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="@string/editText_climbingMechanism"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/darkGray"
                 android:textColor="@color/black"/>
 
             <Button
