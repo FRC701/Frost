@@ -22,14 +22,14 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <EditText
-        android:id="@+id/eventName"
+        android:id="@+id/teamNumber"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:background="@drawable/text_box"
         android:drawableStart="@drawable/icon_teams"
         android:drawablePadding="20dp"
         android:ems="10"
-        android:hint="Team Number"
+        android:hint="@string/editTextTeamNumber"
         android:inputType="textPersonName"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
@@ -38,20 +38,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintVertical_bias="0.339"/>
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintVertical_bias="0.376"/>
 
-    <Button
-        android:id="@+id/creatTeam"
+    <EditText
+        android:id="@+id/teamName"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button"
-        android:text="Create Team"
-        app:layout_constraintBottom_toTopOf="@+id/create_bar"
+        android:layout_height="50dp"
+        android:background="@drawable/text_box"
+        android:drawableStart="@drawable/icon_name"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="@string/editTextTeamName"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintVertical_bias="0.470"/>
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintVertical_bias="0.480"/>
+
+    <Button
+        android:id="@+id/createTeam"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:text="@string/buttonCreateTeam"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamName"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintVertical_bias="0.120"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
