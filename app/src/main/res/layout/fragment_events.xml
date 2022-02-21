@@ -3,17 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.EventsFragment">
 
-    <TextView
-        android:id="@+id/text_gallery"
+    <ListView
+        android:id="@+id/eventsList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="EVENTS PAGE"
-        android:textAlignment="center"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:listSelector="@color/pastelRed"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
