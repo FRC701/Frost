@@ -8,17 +8,13 @@
     tools:context=".Fragments.Scouting.Pit.PActive"
     android:id="@+id/pitHomeLayout1">
 
-
-    <TextView
-        android:id="@+id/textView4"
+    <Spinner
+        android:id="@+id/teamSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pitScoutingHeaderHome"
-        android:textAlignment="center"
-        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/startPit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/startPit"
@@ -26,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
-        android:text="start pit scouting!"
+        android:text="@string/start_pit_scouting_button"
         android:textAlignment="center"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,10 +31,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="@+id/startPit"
-        android:id="@+id/pitHomeLayout2">
+        tools:layout_editor_absoluteX="33dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/scouting_bar"
@@ -49,8 +46,72 @@
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/pit_match_bar" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="664dp"
+            android:text="@string/pitScoutingHeaderHome"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="406dp"
+            android:text="1. Choose a team to scout"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.294" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/cornflowerBlue"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="406dp"
+            android:text="2. Tap Start Pit Scouting"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.44" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="406dp"
+            android:text="3. When finished, click Finish Pit Scouting and repeat"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.668" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

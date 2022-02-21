@@ -80,4 +80,10 @@
         android:name="org.robovikes.frost.Fragments.Scouting.Match.MAuto"
         android:label="Match Auto Scouting"
         tools:layout="@layout/fragment_match_auto" />
+
+    <fragment
+        android:id="@+id/nav_strategy_board"
+        android:name="org.robovikes.frost.Fragments.StrategyBoard"
+        android:label="Strategy Board"
+        tools:layout="@layout/fragment_strategy_board" />
 </navigation>
