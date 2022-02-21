@@ -34,7 +34,7 @@
         android:id="@+id/blueAllianceMatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Blue Alliance"
+        android:text="@string/textViewBlueAlliance"
         app:layout_constraintBottom_toTopOf="@+id/matchLayoutView"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -42,7 +42,7 @@
         android:id="@+id/redAllianceMatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Red Alliance"
+        android:text="@string/textViewRedAlliance"
         app:layout_constraintBottom_toTopOf="@+id/matchLayoutView"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -50,7 +50,7 @@
         android:id="@+id/red1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/textViewRed1"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/match" />
@@ -59,7 +59,7 @@
         android:id="@+id/blue1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/textViewBlue1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/matchLayoutView"/>
 
@@ -67,7 +67,7 @@
         android:id="@+id/match"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Match 50"
+        android:text="@string/textViewMatch"
         app:layout_constraintBottom_toTopOf="@+id/matchLayoutView"
         app:layout_constraintEnd_toStartOf="@+id/redAllianceMatch"
         app:layout_constraintStart_toEndOf="@+id/blueAllianceMatch"/>
@@ -76,7 +76,7 @@
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0 - 0"
+        android:text="@string/textViewScore"
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
