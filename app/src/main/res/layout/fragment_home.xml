@@ -8,10 +8,10 @@
     android:background="?attr/colorPrimaryVariant">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home"
+        android:text="@string/textViewHome"
         android:textColor="@color/white"
         android:textSize="35sp"
         android:textStyle="bold"
@@ -38,26 +38,27 @@
             android:background="@drawable/draw_ongoing_events"
             android:gravity="center_vertical"
             android:paddingStart="15dp"
-            android:text="  Current Event"
+            android:text="@string/textViewCurrentEvent"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:drawableStartCompat="@drawable/icon_events"
+            app:drawableTint="?attr/colorOnSecondary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.175"
-            app:drawableStartCompat="@drawable/icon_events"
-            app:drawableTint="?attr/colorOnSecondary"/>
+            tools:text="  Current Event" />
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/topMatch"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:background="@drawable/draw_top_match"
             android:gravity="center_vertical"
             android:paddingStart="15dp"
-            android:text="  Top Match"
+            android:text="@string/textViewTopMatch"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -68,7 +69,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5"
             app:drawableStartCompat="@drawable/icon_matches"
-            app:drawableTint="?attr/colorOnSecondary" />
+            app:drawableTint="?attr/colorOnSecondary"
+            tools:text="  Top Match"/>
         <TextView
             android:id="@+id/bestMatch"
             android:layout_width="match_parent"
@@ -76,7 +78,7 @@
             android:background="@drawable/draw_top_team"
             android:gravity="center_vertical"
             android:paddingStart="15dp"
-            android:text="  Top Team"
+            android:text="@string/textViewTopTeam"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -87,7 +89,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.825"
             app:drawableStartCompat="@drawable/icon_top_team"
-            app:drawableTint="?attr/colorOnSecondary"/>
+            app:drawableTint="?attr/colorOnSecondary"
+            tools:text="  Top Team"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

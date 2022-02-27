@@ -118,13 +118,6 @@
     <string name="button_save_pit_scouting">Finish Pit Scouting</string>
 
 <!--match home page string-->
-    <string name="matchNumber">Match</string>
-
-
-
-
-
-    <!--match home page strings-->
     <string name="textView_matchNumber">Match</string>
     <string name="textView_setup_matchHeader">Setup Match</string>
     <string name="textView_teamScoutingQuestion">Select Team To Scout</string>
@@ -177,6 +170,40 @@
     <string name="button_end_matchScout">End Match</string>
     <string name="textView_lower_hubTeleHeader">Lower Hub</string>
     <string name="textView_lowerScoreTele">Score</string>
+
+    <!--Event Layout strings-->
+    <string name="textViewEventTeams">TextView</string>
+    <string name="textViewEventName">Example</string>
+    <string name="textViewEndDate">End Date</string>
+    <string name="textViewStartDate">Start Date</string>
+    <string name="textViewEventStart">TextView</string>
+    <string name="textViewEventEnd">TextView</string>
+    <string name="textViewRegistered">Registered Teams</string>
+
+    <!--Create Events Strings-->
+    <string name="editTextEventName">Event Name</string>
+    <string name="editTextEventStart">Event Start (1/15/2022)</string>
+    <string name="editTextEventEnd">Event End (1/15/2022)</string>
+    <string name="buttonCreateEvent">Create Event</string>
+
+    <!--Create Teams Strings-->
+    <string name="editTextTeamNumber">Team Number</string>
+    <string name="buttonCreateTeam">Create Team</string>
+    <string name="editTextTeamName">Team Name</string>
+
+    <!--Home Page Strings-->
+    <string name="textViewHome">Home</string>
+    <string name="textViewCurrentEvent">Current Event</string>
+    <string name="textViewTopMatch">Top Match</string>
+    <string name="textViewTopTeam">Top Team</string>
+
+    <!--Match Layout Strings-->
+    <string name="textViewBlueAlliance">Blue Alliance</string>
+    <string name="textViewRedAlliance">Red Alliance</string>
+    <string name="textViewRed1">TextView</string>
+    <string name="textViewBlue1">TextView</string>
+    <string name="textViewMatch">Match 50</string>
+    <string name="textViewScore">0 - 0</string>
 
 
 </resources>
