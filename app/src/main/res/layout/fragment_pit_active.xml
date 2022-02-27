@@ -23,8 +23,7 @@
             android:id="@+id/linearLayout_pitScoutingActive"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/pitActiveLayout2">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textview_autoQuestionsSection"
