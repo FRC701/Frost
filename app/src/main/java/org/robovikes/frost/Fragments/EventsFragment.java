@@ -16,7 +16,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.robovikes.frost.Fragments.EventListAdapter;
 import org.robovikes.frost.EventManager;
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentEventsBinding;

@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-
 import org.robovikes.frost.R;
 import org.robovikes.frost.Utils.SavePage;
 import org.robovikes.frost.databinding.FragmentPitActiveBinding;

@@ -1,6 +1,5 @@
 package org.robovikes.frost.Fragments.Create;
 
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;

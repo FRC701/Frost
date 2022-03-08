@@ -1,7 +1,5 @@
 package org.robovikes.frost.DataManager;
 
-import org.robovikes.frost.MainActivity;
-
 import java.util.ArrayList;
 
 public class Team  {
