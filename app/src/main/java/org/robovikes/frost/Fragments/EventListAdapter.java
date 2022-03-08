@@ -40,7 +40,6 @@ public class EventListAdapter extends ArrayAdapter {
             endText.setText(end.get(position));
             nameText.setText(name.get(position));
             teamsText.setText(String.valueOf(15));
-
         }
         return row;
     }

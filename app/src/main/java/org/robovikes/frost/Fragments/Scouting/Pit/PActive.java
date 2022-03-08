@@ -9,12 +9,14 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 
 import org.robovikes.frost.R;
+import org.robovikes.frost.Utils.SavePage;
 import org.robovikes.frost.databinding.FragmentPitActiveBinding;
 
 
@@ -38,6 +40,7 @@ public class PActive extends Fragment {
         seekBar = (SeekBar) root.findViewById(R.id. seekBarRating);
         textView = (TextView) root.findViewById(R.id.textViewRating);
 
+        SavePage.loadSave(this, (ViewGroup) root);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
@@ -94,6 +97,8 @@ public class PActive extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        ConstraintLayout layout = binding.getRoot().findViewById(R.id.constraintLayout_pitActive);
+        SavePage.saveLayout(this, layout);
         binding = null;
     }
 }

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.robovikes.frost.R;
+import org.robovikes.frost.Utils.SavePage;
 import org.robovikes.frost.databinding.FragmentMatchTeleBinding;
 
 public class MTele extends Fragment{
@@ -43,7 +45,7 @@ public class MTele extends Fragment{
         TextView teleScoreR = root.findViewById(R.id.textView_lowerScoreTele);
         teleScoreL.setText(String.valueOf(totalTeleScoreL));
         teleScoreR.setText(String.valueOf(totalTeleScoreR));
-
+        SavePage.loadSave(this, (ViewGroup) root);
         telePlusL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,6 +86,8 @@ public class MTele extends Fragment{
             @Override
             public void onClick(View view) {
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
+                LinearLayout layout = root.findViewById(R.id.matchTeleLayout);
+                SavePage.clearSave(MTele.this, layout, savedInstanceState);
                 navController.navigate(R.id.nav_match_home);
             }
         });
@@ -106,6 +110,8 @@ public class MTele extends Fragment{
     @Override
     public void onDestroyView(){
         super.onDestroyView();
+        View root = binding.getRoot();
+        SavePage.saveLayout(this, (ViewGroup) root);
         binding = null;
     }
 }

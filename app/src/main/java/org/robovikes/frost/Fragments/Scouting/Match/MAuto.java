@@ -8,9 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -19,7 +22,10 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.robovikes.frost.R;
+import org.robovikes.frost.Utils.SavePage;
 import org.robovikes.frost.databinding.FragmentMatchAutoBinding;
+
+import java.util.Objects;
 
 public class MAuto extends Fragment{
 
@@ -30,7 +36,6 @@ public class MAuto extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         binding = FragmentMatchAutoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
         Button autoPlusL = root.findViewById(R.id.autoPlusL);
         Button autoMinusL = root.findViewById(R.id.autoMinusL);
         Button autoPlusR = root.findViewById(R.id.autoPlusR);
@@ -39,6 +44,7 @@ public class MAuto extends Fragment{
         TextView autoScoreR = root.findViewById(R.id.textView_lowerScoreAuto);
         autoScoreL.setText(String.valueOf(totalAutoScoreL));
         autoScoreR.setText(String.valueOf(totalAutoScoreR));
+        SavePage.loadSave(this, (ViewGroup) root);
 
         autoPlusL.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +53,6 @@ public class MAuto extends Fragment{
                 autoScoreL.setText(String.valueOf(totalAutoScoreL));
             }
         });
-
         autoMinusL.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,10 +95,11 @@ public class MAuto extends Fragment{
     }
 
     @Override
-    public void onDestroyView(){
-        setRetainInstance(true);
+    public void onPause(){
+        super.onPause();
+        View root = binding.getRoot();
         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
-        super.onDestroyView();
+        SavePage.saveLayout(this, (ViewGroup) root);
         binding = null;
     }
 }
