@@ -119,40 +119,15 @@
                     android:text="@string/checkbox_robotAutoLowerHub"
                     android:textColor="@color/black"/>
 
+                <CheckBox
+                    android:id="@+id/checkbox_intakeOffGround"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox_intakeOffGround"
+                    android:textColor="@color/black"/>
+
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/textview_intakeCargoGroundQuestion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/textview_intakeCargoGroundQuestion"
-                android:textSize="18sp"
-                android:textColor="@color/black"/>
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_intakeCargoGround">
-
-                <RadioButton
-                    android:id="@+id/radioButton_cargoYes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/radioButton_cargoYes"
-                    android:textColor="@color/black"
-                    tools:ignore="TextContrastCheck" />
-
-                <RadioButton
-                    android:id="@+id/radioButton_cargoNo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/radioButton_cargoNo"
-                    android:textColor="@color/black"
-                    tools:ignore="TextContrastCheck" />
-
-            </RadioGroup>
 
             <TextView
                 android:id="@+id/textview_humanPlayerAccuracyQuestion"

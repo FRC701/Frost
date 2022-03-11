@@ -8,7 +8,6 @@
     tools:context=".Fragments.Create.CreateEvents">
 
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/create_bar"
         android:layout_width="match_parent"
@@ -16,29 +15,26 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/event_team_bar"/>
+        app:menu="@menu/event_team_bar">
 
-    <EditText
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <Spinner
         android:id="@+id/eventName"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:background="@drawable/text_box"
-        android:drawableStart="@drawable/icon_name"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="@string/editTextEventName"
-        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="182dp"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="182dp"
         app:layout_constraintBottom_toTopOf="@+id/create_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.254"/>
+        app:layout_constraintVertical_bias="0.254"
+        />
 
     <EditText
         android:id="@+id/eventStart"
