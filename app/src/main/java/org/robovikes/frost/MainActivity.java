@@ -13,7 +13,10 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.navigation.NavigationView;
 
 import org.robovikes.frost.DataManager.Event;
+import org.robovikes.frost.Utils.SavePage;
 import org.robovikes.frost.databinding.ActivityMainBinding;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
             currentEvent.setEvent(currentEvent);
             System.out.println(currentEvent);
         }
+        ArrayList<String> e = new ArrayList<>();
+        e.add("a");
+        e.add("b");
+        e.add("c");
+        SavePage.savePath("Tree/Hello/Please/Work/Thanks", e);
     }
 
     @Override

@@ -57,18 +57,17 @@ public class PActive extends Fragment {
             }
         });
 
-        seekBarAccuracy = (SeekBar) root.findViewById(R.id. seekBarAccuracy);
-        textViewAccuracy = (TextView) root.findViewById(R.id.textViewAccuracy);
+        seekBarAccuracy = root.findViewById(R.id. seekBarAccuracy);
+        textViewAccuracy = root.findViewById(R.id.textViewAccuracy);
 
         seekBarAccuracy.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-                textViewAccuracy.setText("accuracy " + String.valueOf(progress));
+                textViewAccuracy.setText("accuracy " + progress);
             }
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override

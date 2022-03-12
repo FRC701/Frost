@@ -18,10 +18,16 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import org.robovikes.frost.DataManager.Event;
+import org.robovikes.frost.EventManager;
 import org.robovikes.frost.R;
 import org.robovikes.frost.Utils.SavePage;
 import org.robovikes.frost.databinding.FragmentMatchTeleBinding;
+
+import java.lang.ref.Reference;
 
 public class MTele extends Fragment{
 
@@ -85,7 +91,9 @@ public class MTele extends Fragment{
             public void onClick(View view) {
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
                 LinearLayout layout = root.findViewById(R.id.matchTeleLayout);
-                SavePage.clearSave(MTele.this, layout, savedInstanceState);
+                FirebaseDatabase db = FirebaseDatabase.getInstance();
+                DatabaseReference match = db.getReference("Events/" + Event.getCurrentEvent() + "/teams/" + 1 + "/matches/" + 1);
+                match.child("points").setValue(5);
                 navController.navigate(R.id.nav_match_home);
             }
         });

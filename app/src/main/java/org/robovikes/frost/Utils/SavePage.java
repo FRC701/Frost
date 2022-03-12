@@ -17,6 +17,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.textview.MaterialTextView;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -228,5 +229,12 @@ public class SavePage {
             }
         }
         return Layouts;
+    }
+    public static void saveData(ViewGroup view) {
+
+    }
+    public static void savePath(String path, Object value){
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        db.getReference(path).setValue(value);
     }
 }

@@ -30,7 +30,7 @@ public class MAuto extends Fragment{
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         binding = FragmentMatchAutoBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        ViewGroup root = binding.getRoot();
         Button autoPlusL = root.findViewById(R.id.autoPlusL);
         Button autoMinusL = root.findViewById(R.id.autoMinusL);
         Button autoPlusR = root.findViewById(R.id.autoPlusR);
@@ -39,7 +39,7 @@ public class MAuto extends Fragment{
         TextView autoScoreR = root.findViewById(R.id.textView_lowerScoreAuto);
         autoScoreL.setText(String.valueOf(totalAutoScoreL));
         autoScoreR.setText(String.valueOf(totalAutoScoreR));
-        SavePage.loadSave(this, (ViewGroup) root);
+        SavePage.loadSave(this, root);
 
         autoPlusL.setOnClickListener(new View.OnClickListener() {
             @Override
