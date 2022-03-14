@@ -39,7 +39,7 @@ public class MTele extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
         binding = FragmentMatchTeleBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        ViewGroup root = binding.getRoot();
         Button telePlusL = root.findViewById(R.id.telePlusL);
         Button teleMinusL = root.findViewById(R.id.teleMinusL);
         Button telePlusR = root.findViewById(R.id.telePlusR);
@@ -49,7 +49,7 @@ public class MTele extends Fragment{
         TextView teleScoreR = root.findViewById(R.id.textView_lowerScoreTele);
         teleScoreL.setText(String.valueOf(totalTeleScoreL));
         teleScoreR.setText(String.valueOf(totalTeleScoreR));
-        SavePage.loadSave(this, (ViewGroup) root);
+        SavePage.loadSave(this, root);
         telePlusL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,7 +97,6 @@ public class MTele extends Fragment{
                 navController.navigate(R.id.nav_match_home);
             }
         });
-
 
         final Handler handler = new Handler(Looper.getMainLooper());
         handler.postDelayed(new Runnable() {

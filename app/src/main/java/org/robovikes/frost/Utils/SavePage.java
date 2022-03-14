@@ -27,16 +27,24 @@ public class SavePage {
     public static void loadSave(Fragment fragment, ViewGroup view) {
         SharedPreferences preferences = fragment.getActivity().getPreferences(MODE_PRIVATE);
         for(CheckBox box : getCheckBoxes(view)) {
-            box.setChecked(preferences.getBoolean(fragment.getResources().getResourceEntryName(box.getId()), false));
+            if (preferences.contains(fragment.getResources().getResourceEntryName(box.getId()))) {
+                box.setChecked(preferences.getBoolean(fragment.getResources().getResourceEntryName(box.getId()), false));
+            }
         }
-        for(RadioGroup group : getRadioGroups(view)) {
-            group.check(preferences.getInt(fragment.getResources().getResourceEntryName(group.getId()), -1));
+        for(RadioButton button : getRadioButtons(view)) {
+            if (preferences.contains(fragment.getResources().getResourceEntryName(button.getId()))) {
+                button.setChecked(preferences.getBoolean(fragment.getResources().getResourceEntryName(button.getId()), false));
+            }
         }
         for(EditText text : getEditTexts(view)) {
-            text.setText(preferences.getString(fragment.getResources().getResourceEntryName(text.getId()), ""));
+            if (preferences.contains(fragment.getResources().getResourceEntryName(text.getId()))) {
+                text.setText(preferences.getString(fragment.getResources().getResourceEntryName(text.getId()), ""));
+            }
         }
         for(SeekBar bar : getSeekBars(view)) {
-            bar.setProgress(preferences.getInt(fragment.getResources().getResourceEntryName(bar.getId()), -1));
+            if (preferences.contains(fragment.getResources().getResourceEntryName(bar.getId()))) {
+                bar.setProgress(preferences.getInt(fragment.getResources().getResourceEntryName(bar.getId()), -1));
+            }
         }
     }
     public static void clearSave(Fragment fragment, ViewGroup view, Bundle savedInstance) {
@@ -51,8 +59,8 @@ public class SavePage {
         for(CheckBox box : getCheckBoxes(view)) {
             editor.putBoolean(fragment.getResources().getResourceEntryName(box.getId()), box.isChecked());
         }
-        for(RadioGroup group : getRadioGroups(view)) {
-            editor.putInt(fragment.getResources().getResourceEntryName(group.getId()), group.getCheckedRadioButtonId());
+        for(RadioButton button : getRadioButtons(view)) {
+            editor.putBoolean(fragment.getResources().getResourceEntryName(button.getId()), button.isChecked());
         }
         for(EditText editText : getEditTexts(view)) {
             editor.putString(fragment.getResources().getResourceEntryName(editText.getId()), editText.getText().toString());
