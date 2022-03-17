@@ -212,6 +212,7 @@
     <string name="textViewMatch">Match 50</string>
     <string name="textViewScore">0 - 0</string>
     <string name="checkbox_intakeOffGround">Intake Cargo Off Ground</string>
+    <string name="editText_TeamNumber">Team Number</string>
 
 
 </resources>
