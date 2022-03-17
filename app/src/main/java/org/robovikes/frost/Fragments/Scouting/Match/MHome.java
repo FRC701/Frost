@@ -20,9 +20,16 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentMatchHomeBinding;
+
+import java.util.ArrayList;
 
 public class MHome extends Fragment {
 
@@ -92,16 +99,32 @@ public class MHome extends Fragment {
         View root = binding.getRoot();
 
         teamSpinner = root.findViewById(R.id.teamSpinner);
+        ArrayList<Integer> teams = new ArrayList<>();
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = db.getReference("Events/teams");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot rawSnapshot) {
+                for (DataSnapshot snapshot : rawSnapshot.getChildren()) {
+                    System.out.println(snapshot.getKey());
+                }
+            }
 
-        ArrayAdapter<CharSequence> teamAdapter = ArrayAdapter.createFromResource(root.getContext(), R.array.teams, android.R.layout.simple_spinner_item);
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        ArrayAdapter<Integer> teamAdapter = new ArrayAdapter<>(root.getContext(), android.R.layout.simple_spinner_dropdown_item, teams);
         teamAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         teamSpinner.setAdapter(teamAdapter);
 
         teamSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-             String choice = parent.getItemAtPosition(position).toString();
-             Toast.makeText(binding.getRoot().getContext(), choice, Toast.LENGTH_LONG).show();
+                String choice = parent.getItemAtPosition(position).toString();
+                Toast.makeText(binding.getRoot().getContext(), choice, Toast.LENGTH_LONG).show();
 
             }
 
@@ -110,5 +133,4 @@ public class MHome extends Fragment {
             }
         });
     }
-
 }

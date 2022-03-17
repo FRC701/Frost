@@ -47,11 +47,13 @@ public class SavePage {
             }
         }
     }
-    public static void clearSave(Fragment fragment, ViewGroup view, Bundle savedInstance) {
+    public static void clearSave(Fragment fragment, ViewGroup view) {
+        SharedPreferences preferences = fragment.getActivity().getPreferences(MODE_PRIVATE);
         for(CheckBox box : getCheckBoxes(view)) {
             String boxKey = fragment.getResources().getResourceEntryName(box.getId());
-            savedInstance.remove(boxKey);
+            preferences.edit().remove(boxKey);
         }
+        preferences.edit().apply();
     }
     public static void saveLayout(Fragment fragment, ViewGroup view) {
         SharedPreferences preferences = fragment.getActivity().getPreferences(MODE_PRIVATE);

@@ -34,7 +34,6 @@ public class MTele extends Fragment{
     private FragmentMatchTeleBinding binding;
     private int totalTeleScoreL = 0;
     private int totalTeleScoreR = 0;
-    private String TOTAL_TELE_SCORE_L;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
@@ -49,7 +48,6 @@ public class MTele extends Fragment{
         TextView teleScoreR = root.findViewById(R.id.textView_lowerScoreTele);
         teleScoreL.setText(String.valueOf(totalTeleScoreL));
         teleScoreR.setText(String.valueOf(totalTeleScoreR));
-        SavePage.loadSave(this, root);
         telePlusL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,7 +88,6 @@ public class MTele extends Fragment{
             @Override
             public void onClick(View view) {
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
-                LinearLayout layout = root.findViewById(R.id.matchTeleLayout);
                 FirebaseDatabase db = FirebaseDatabase.getInstance();
                 DatabaseReference match = db.getReference("Events/" + Event.getCurrentEvent() + "/teams/" + 1 + "/matches/" + 1);
                 match.child("points").setValue(5);
@@ -116,7 +113,6 @@ public class MTele extends Fragment{
     public void onDestroyView(){
         super.onDestroyView();
         View root = binding.getRoot();
-        SavePage.saveLayout(this, (ViewGroup) root);
         binding = null;
     }
 }
