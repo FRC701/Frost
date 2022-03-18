@@ -101,7 +101,7 @@ public class MHome extends Fragment {
         teamSpinner = root.findViewById(R.id.teamSpinner);
         ArrayList<Integer> teams = new ArrayList<>();
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = db.getReference("Events/teams");
+        DatabaseReference myRef = db.getReference("Events/t/teams");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot rawSnapshot) {
