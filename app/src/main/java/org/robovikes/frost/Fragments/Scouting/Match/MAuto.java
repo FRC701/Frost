@@ -1,7 +1,10 @@
 package org.robovikes.frost.Fragments.Scouting.Match;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,8 +35,8 @@ public class MAuto extends Fragment{
 
     private FragmentMatchAutoBinding binding;
     protected FragmentActivity Activity;
-    private int totalAutoScoreL = 0;
-    private int totalAutoScoreR = 0;
+    public int totalAutoScoreL ;
+    public int totalAutoScoreR;
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -43,7 +46,8 @@ public class MAuto extends Fragment{
             Activity = (FragmentActivity) context;
         }
     }
-
+    public MAuto() {
+    }
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         binding = FragmentMatchAutoBinding.inflate(inflater, container, false);
         ViewGroup root = binding.getRoot();
@@ -56,7 +60,11 @@ public class MAuto extends Fragment{
         autoScoreL.setText(String.valueOf(totalAutoScoreL));
         autoScoreR.setText(String.valueOf(totalAutoScoreR));
         SavePage.loadSave(this, root);
-
+        SharedPreferences preferences = Activity.getPreferences(MODE_PRIVATE);
+        totalAutoScoreR = preferences.getInt("AutoLowerScore", -1);
+        totalAutoScoreL = preferences.getInt("AutoUpperScore", -1);
+        autoScoreL.setText(String.valueOf(totalAutoScoreL));
+        autoScoreR.setText(String.valueOf(totalAutoScoreR));
         autoPlusL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,9 +116,12 @@ public class MAuto extends Fragment{
     @Override
     public void onPause(){
         super.onPause();
-        View root = binding.getRoot();
         Activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
-        SavePage.saveLayout(this, (ViewGroup) root);
+        SharedPreferences preferences = Activity.getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt("AutoUpperScore", totalAutoScoreL);
+        editor.putInt("AutoLowerScore", totalAutoScoreR);
+        editor.apply();
         binding = null;
     }
 }

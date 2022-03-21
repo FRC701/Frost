@@ -1,5 +1,10 @@
 package org.robovikes.frost.Fragments.Scouting.Match;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +18,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
@@ -32,9 +38,18 @@ import java.lang.ref.Reference;
 public class MTele extends Fragment{
 
     private FragmentMatchTeleBinding binding;
+    protected FragmentActivity Activity;
     private int totalTeleScoreL = 0;
     private int totalTeleScoreR = 0;
 
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
+        if (context instanceof Activity){
+            Activity = (FragmentActivity) context;
+        }
+    }
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
         binding = FragmentMatchTeleBinding.inflate(inflater, container, false);
@@ -46,6 +61,11 @@ public class MTele extends Fragment{
         Button endMatch = root.findViewById(R.id.button_end_matchScout);
         TextView teleScoreL = root.findViewById(R.id.textView_upperScoreTele);
         TextView teleScoreR = root.findViewById(R.id.textView_lowerScoreTele);
+        teleScoreL.setText(String.valueOf(totalTeleScoreL));
+        teleScoreR.setText(String.valueOf(totalTeleScoreR));
+        SharedPreferences preferences = Activity.getPreferences(MODE_PRIVATE);
+        totalTeleScoreR = preferences.getInt("TeleLowerScore", -1);
+        totalTeleScoreL = preferences.getInt("TeleUpperScore", -1);
         teleScoreL.setText(String.valueOf(totalTeleScoreL));
         teleScoreR.setText(String.valueOf(totalTeleScoreR));
         telePlusL.setOnClickListener(new View.OnClickListener() {
@@ -87,10 +107,14 @@ public class MTele extends Fragment{
         endMatch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences preferences = Activity.getPreferences(MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.remove("TeleUpperScore");
+                editor.remove("TeleLowerScore");
+                editor.remove("AutoUpperScore");
+                editor.remove("AutoLowerScore");
+                editor.apply();
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
-                FirebaseDatabase db = FirebaseDatabase.getInstance();
-                DatabaseReference match = db.getReference("Events/" + Event.getCurrentEvent() + "/teams/" + 1 + "/matches/" + 1);
-                match.child("points").setValue(5);
                 navController.navigate(R.id.nav_match_home);
             }
         });
@@ -110,9 +134,14 @@ public class MTele extends Fragment{
 
 
     @Override
-    public void onDestroyView(){
-        super.onDestroyView();
-        View root = binding.getRoot();
+    public void onPause(){
+        super.onPause();
+        Activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+        SharedPreferences preferences = Activity.getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putInt("TeleUpperScore", totalTeleScoreL);
+        editor.putInt("TeleLowerScore", totalTeleScoreR);
+        editor.apply();
         binding = null;
     }
 }
