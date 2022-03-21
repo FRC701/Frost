@@ -177,6 +177,8 @@
     <string name="button_end_matchScout">End Match</string>
     <string name="textView_lower_hubTeleHeader">Lower Hub</string>
     <string name="textView_lowerScoreTele">Score</string>
+    <string name="ratingQuestionTextView">Rate the teams defense 0-10(10 being best)</string>
+    <string name="ratingEditText">1-10</string>
 
     <!--Event Layout strings-->
     <string name="textViewEventTeams">TextView</string>

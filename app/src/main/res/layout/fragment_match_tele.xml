@@ -274,6 +274,21 @@
                         android:text="@string/radioButton_end_matchDisabled" />
                 </RadioGroup>
 
+                <TextView
+                    android:id="@+id/ratingQuestionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ratingQuestionTextView"
+                    android:textSize="25sp"/>
+
+                <EditText
+                    android:id="@+id/ratingEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="@string/ratingEditText"
+                    android:textSize="25sp"/>
+
                 <Button
                     android:id="@+id/button_end_matchScout"
                     android:layout_width="match_parent"
