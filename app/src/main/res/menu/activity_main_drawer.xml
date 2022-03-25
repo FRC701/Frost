@@ -19,21 +19,13 @@
             android:icon="@drawable/icon_ranking"
             android:title="Rankings" />
         <item
-            android:id="@+id/nav_events"
-            android:icon="@drawable/icon_events"
-            android:title="Events" />
-        <item
             android:id="@+id/nav_matches"
             android:icon="@drawable/icon_matches"
             android:title="Matches" />
         <item
-            android:id="@+id/nav_create_events"
+            android:id="@+id/nav_create_teams"
             android:icon="@drawable/icon_create"
             android:title="Create" />
-        <item
-            android:id="@+id/nav_strategy_board"
-            android:icon="@drawable/icon_strategy_board"
-            android:title="Strategy Board" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/icon_settings"

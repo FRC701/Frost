@@ -50,11 +50,6 @@ public class MainActivity extends AppCompatActivity {
             currentEvent.setEvent(currentEvent);
             System.out.println(currentEvent);
         }
-        ArrayList<String> e = new ArrayList<>();
-        e.add("a");
-        e.add("b");
-        e.add("c");
-        SavePage.savePath("Tree/Hello/Please/Work/Thanks", e);
     }
 
     @Override

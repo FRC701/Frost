@@ -13,7 +13,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/TextView_teamTele"
+            android:id="@+id/textView_teamTele"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -27,11 +27,11 @@
             android:text="@string/textView_matchTele" />
 
         <TextView
-            android:id="@+id/textView_deviceTele"
+            android:id="@+id/textView_allianceTele"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/textView_deviceTele" />
+            android:text="@string/textView_allianceAuto" />
     </LinearLayout>
 
     <View
@@ -92,7 +92,7 @@
             android:text="-"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tele_auto_bar"
+            app:layout_constraintBottom_toTopOf="@+id/tele_bar"
             app:layout_constraintEnd_toEndOf="@+id/textView_upperScoreTele"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -273,31 +273,18 @@
                         android:layout_height="wrap_content"
                         android:text="@string/radioButton_end_matchDisabled" />
                 </RadioGroup>
-
-                <TextView
-                    android:id="@+id/ratingQuestionTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ratingQuestionTextView"
-                    android:textSize="25sp"/>
-
-                <EditText
-                    android:id="@+id/ratingEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="@string/ratingEditText"
-                    android:textSize="25sp"/>
-
                 <Button
                     android:id="@+id/button_end_matchScout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/button_end_matchScout" />
-
-                <Space
+                <EditText
+                    android:id="@+id/ratingEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp" />
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/ratingEditText"
+                    android:textSize="25sp"/>
 
             </LinearLayout>
         </ScrollView>
@@ -349,18 +336,21 @@
             android:text="-"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tele_auto_bar"
+            app:layout_constraintBottom_toTopOf="@+id/tele_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/scrollView2" />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/tele_auto_bar"
+        <Button
+            android:id="@+id/tele_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorPrimaryVariant"
+            android:ems="9"
+            android:text="Auto"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/teleMinusR"
-            app:layout_constraintStart_toStartOf="@+id/teleMinusL"
-            app:menu="@menu/tele_auto_bar" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

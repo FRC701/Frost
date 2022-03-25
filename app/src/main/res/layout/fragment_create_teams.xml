@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/createTeamsLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -10,57 +9,25 @@
 
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/create_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/event_team_bar">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-    <Spinner
-        android:id="@+id/teamNumber"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:background="@drawable/text_box"
-        android:drawableStart="@drawable/icon_teams"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="@string/editTextTeamNumber"
-        android:inputType="textPersonName"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/create_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintVertical_bias="0.376" />
-
-
     <EditText
-        android:id="@+id/teamName"
+        android:id="@+id/teamNumber"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:background="@drawable/text_box"
         android:drawableStart="@drawable/icon_name"
         android:drawablePadding="20dp"
         android:ems="10"
-        android:hint="@string/editTextTeamName"
-        android:inputType="textPersonName"
+        android:hint="@string/editTextTeamNumber"
+        android:inputType="number"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintVertical_bias="0.480"/>
+        app:layout_constraintVertical_bias="0.356" />
 
     <Button
         android:id="@+id/createTeam"
@@ -71,7 +38,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teamName"
+        app:layout_constraintTop_toBottomOf="@+id/teamNumber"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintVertical_bias="0.120"/>
 

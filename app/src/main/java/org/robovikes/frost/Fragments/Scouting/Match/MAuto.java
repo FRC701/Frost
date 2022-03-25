@@ -7,8 +7,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,16 +18,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import org.robovikes.frost.MainActivity;
 import org.robovikes.frost.R;
 import org.robovikes.frost.Utils.SavePage;
 import org.robovikes.frost.databinding.FragmentMatchAutoBinding;
-
-import java.util.Objects;
 
 public class MAuto extends Fragment{
 
@@ -55,16 +47,24 @@ public class MAuto extends Fragment{
         Button autoMinusL = root.findViewById(R.id.autoMinusL);
         Button autoPlusR = root.findViewById(R.id.autoPlusR);
         Button autoMinusR = root.findViewById(R.id.autoMinusR);
+        Button teleNav = root.findViewById(R.id.auto_bar);
         TextView autoScoreL = root.findViewById(R.id.textView_upperScoreAuto);
         TextView autoScoreR = root.findViewById(R.id.textView_lowerScoreAuto);
+        TextView teamAuto = root.findViewById(R.id.textView_teamAuto);
+        TextView matchAuto = root.findViewById(R.id.textView_matchAuto);
+        TextView allianceAuto = root.findViewById(R.id.textView_allianceAuto);
         autoScoreL.setText(String.valueOf(totalAutoScoreL));
         autoScoreR.setText(String.valueOf(totalAutoScoreR));
         SavePage.loadSave(this, root);
         SharedPreferences preferences = Activity.getPreferences(MODE_PRIVATE);
+        teamAuto.setText("Team: " + preferences.getInt("teamScouting", -1));
+        matchAuto.setText("Match: " + preferences.getInt("matchScouting", -1));
+        allianceAuto.setText("Alliance: " + preferences.getString("deviceAlliance", ""));
         totalAutoScoreR = preferences.getInt("AutoLowerScore", -1);
         totalAutoScoreL = preferences.getInt("AutoUpperScore", -1);
         autoScoreL.setText(String.valueOf(totalAutoScoreL));
         autoScoreR.setText(String.valueOf(totalAutoScoreR));
+
         autoPlusL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,9 +75,9 @@ public class MAuto extends Fragment{
         autoMinusL.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             if(totalAutoScoreL > 0){
-                 totalAutoScoreL--;
-                 autoScoreL.setText(String.valueOf(totalAutoScoreL));
+                if(totalAutoScoreL > 0){
+                    totalAutoScoreL--;
+                    autoScoreL.setText(String.valueOf(totalAutoScoreL));
                 }
             }
         }));
@@ -99,29 +99,32 @@ public class MAuto extends Fragment{
                 }
             }
         });
-
-        final Handler handler = new Handler(Looper.getMainLooper());
-        handler.postDelayed(new Runnable() {
+        teleNav.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View view) {
                 NavController navController = Navigation.findNavController(Activity, R.id.nav_host_fragment_content_main);
-                BottomNavigationView teleAutoBar = root.findViewById(R.id.tele_auto_bar);
-                NavigationUI.setupWithNavController(teleAutoBar, navController);
-                Activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+                navController.navigate(R.id.nav_match_tele);
             }
-        }, 10);
+        });
         return root;
     }
 
     @Override
     public void onPause(){
         super.onPause();
+        ViewGroup root = binding.getRoot();
         Activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
         SharedPreferences preferences = Activity.getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt("AutoUpperScore", totalAutoScoreL);
         editor.putInt("AutoLowerScore", totalAutoScoreR);
         editor.apply();
+        SavePage.saveLayout(this, root);
+        binding = null;
+    }
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
         binding = null;
     }
 }

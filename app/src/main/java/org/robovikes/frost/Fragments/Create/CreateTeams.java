@@ -1,19 +1,16 @@
 package org.robovikes.frost.Fragments.Create;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.robovikes.frost.R;
 import org.robovikes.frost.databinding.FragmentCreateTeamsBinding;
@@ -21,23 +18,33 @@ import org.robovikes.frost.databinding.FragmentCreateTeamsBinding;
 public class CreateTeams extends Fragment {
 
     private FragmentCreateTeamsBinding binding;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentCreateTeamsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final Handler handler = new Handler(Looper.getMainLooper());
-        handler.postDelayed(new Runnable() {
+        Button createEvent = root.findViewById(R.id.createTeam);
+        createEvent.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment_content_main);
-                BottomNavigationView eventsTeamsBar = root.findViewById(R.id.create_bar);
-                NavigationUI.setupWithNavController(eventsTeamsBar, navController);
-
+            public void onClick(View view) {
+                TextView teamNumber = root.findViewById(R.id.teamNumber);
+                if (!teamNumber.getText().toString().equals("")) {
+                    int number = Integer.parseInt(teamNumber.getText().toString().trim());
+                    createTeam(number);
+                    teamNumber.setText(null);
+                } else {
+                    if (teamNumber.getText().toString().equals("")) {
+                        teamNumber.setError("This field is required");
+                    }
+                }
             }
-        }, 10);
+        });
         return root;
+    }
+    public void createTeam(int team) {
+        database.getReference("Events/UCD/teams/" + team + "/bpa").setValue(0);
     }
 
     @Override

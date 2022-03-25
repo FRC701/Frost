@@ -73,7 +73,7 @@
     <fragment
         android:id="@+id/nav_match_tele"
         android:name="org.robovikes.frost.Fragments.Scouting.Match.MTele"
-        android:label="Home Tele Scouting"
+        android:label="Match Tele Scouting"
         tools:layout="@layout/fragment_match_tele" />
 
     <fragment

@@ -2,6 +2,7 @@ package org.robovikes.frost.Utils;
 
 import static android.content.Context.MODE_PRIVATE;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.ViewGroup;
@@ -48,12 +49,26 @@ public class SavePage {
         }
     }
     public static void clearSave(Fragment fragment, ViewGroup view) {
-        SharedPreferences preferences = fragment.getActivity().getPreferences(MODE_PRIVATE);
+        Activity activity = fragment.getActivity();
+        SharedPreferences preferences = activity.getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
         for(CheckBox box : getCheckBoxes(view)) {
             String boxKey = fragment.getResources().getResourceEntryName(box.getId());
-            preferences.edit().remove(boxKey);
+            editor.remove(boxKey);
         }
-        preferences.edit().apply();
+        for(RadioButton button : getRadioButtons(view)) {
+            String boxKey = fragment.getResources().getResourceEntryName(button.getId());
+            editor.remove(boxKey);
+        }
+        for(EditText editText : getEditTexts(view)) {
+            String boxKey = fragment.getResources().getResourceEntryName(editText.getId());
+            editor.remove(boxKey);
+        }
+        for(SeekBar bar : getSeekBars(view)) {
+            String boxKey = fragment.getResources().getResourceEntryName(bar.getId());
+            editor.remove(boxKey);
+        }
+        editor.apply();
     }
     public static void saveLayout(Fragment fragment, ViewGroup view) {
         SharedPreferences preferences = fragment.getActivity().getPreferences(MODE_PRIVATE);

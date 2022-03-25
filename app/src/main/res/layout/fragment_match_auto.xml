@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/matchAutoLayout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/matchAutoLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -27,18 +27,18 @@
             android:text="@string/textView_matchAuto" />
 
         <TextView
-            android:id="@+id/textView_deviceAuto"
+            android:id="@+id/textView_allianceAuto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/textView_deviceAuto" />
+            android:text="@string/textView_allianceAuto" />
     </LinearLayout>
 
     <View
         android:id="@+id/view4"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="@color/babyBlue"/>
+        android:background="@color/babyBlue" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/matchAutoLayout2"
@@ -49,10 +49,10 @@
             android:id="@+id/textView_upper_hubAutoHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/textView_upper_hubAutoHeader"
-            android:textSize="20sp"
             android:ems="9"
+            android:text="@string/textView_upper_hubAutoHeader"
             android:textAlignment="center"
+            android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/matchAutoLayout3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -74,10 +74,10 @@
             android:id="@+id/textView_upperScoreAuto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="@string/textView_upperScoreAuto"
-            android:textSize="20sp"
             android:ems="9"
+            android:text="@string/textView_upperScoreAuto"
+            android:textAlignment="center"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusL"
             app:layout_constraintEnd_toStartOf="@+id/matchAutoLayout3"
             app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +92,7 @@
             android:text="-"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tele_auto_bar"
+            app:layout_constraintBottom_toTopOf="@+id/auto_bar"
             app:layout_constraintEnd_toStartOf="@+id/matchAutoLayout3"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -109,8 +109,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="20"
-                android:textSize="25sp"
-                android:text="@string/textView_scoreQuestionAuto" />
+                android:text="@string/textView_scoreQuestionAuto"
+                android:textSize="25sp" />
 
             <CheckBox
                 android:id="@+id/checkBox_taxiing"
@@ -172,10 +172,10 @@
             android:id="@+id/textView_lowerScoreAuto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="@string/textView_lowerScoreAuto"
-            android:textSize="20sp"
             android:ems="9"
+            android:text="@string/textView_lowerScoreAuto"
+            android:textAlignment="center"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/autoMinusR"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/matchAutoLayout3"
@@ -190,15 +190,19 @@
             android:text="-"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tele_auto_bar"
+            app:layout_constraintBottom_toTopOf="@+id/auto_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/matchAutoLayout3" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/tele_auto_bar"
+        <Button
+            android:id="@+id/auto_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/tele_auto_bar"
+            android:backgroundTint="?attr/colorPrimaryVariant"
+            android:ems="9"
+            android:text="Tele"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

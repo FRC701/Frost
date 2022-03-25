@@ -135,7 +135,7 @@
     <!--match auto page strings-->
     <string name="textView_teamAuto">Team:</string>
     <string name="textView_matchAuto">Match:</string>
-    <string name="textView_deviceAuto">Device:</string>
+    <string name="textView_allianceAuto">Alliance:</string>
     <string name="textView_upper_hubAutoHeader">Upper Hub</string>
     <string name="textView_upperScoreAuto">Score</string>
     <string name="textView_scoreQuestionAuto">Score</string>
@@ -198,7 +198,6 @@
     <!--Create Teams Strings-->
     <string name="editTextTeamNumber">Team Number</string>
     <string name="buttonCreateTeam">Create Team</string>
-    <string name="editTextTeamName">Team Name</string>
 
     <!--Home Page Strings-->
     <string name="textViewHome">Home</string>

@@ -47,7 +47,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <EditText
             android:id="@+id/textView_matchNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +58,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/plusMatch"
             app:layout_constraintStart_toEndOf="@+id/minusMatch"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:inputType="number"/>
 
         <Button
             android:id="@+id/plusMatch"
@@ -95,6 +96,20 @@
         android:id="@+id/view5"
         android:layout_width="match_parent"
         android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/allianceSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alliance Selector"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/matchHomeAllianceSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blue" />
 
     <Button
         android:id="@+id/button_start_match_scouting"
